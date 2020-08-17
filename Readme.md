@@ -1,12 +1,14 @@
 # BUENAS TINTAS
 
+![Logo](/Logo/logo1.png)
+
 ## Comisión 3
 
 ## Grupo 5
 
 ### Integrantes
 
-#### Nicolás Caputo
+#### ![Nico](/Images/Emoji_Nico1.png) Pablo Nicolás Caputo
 25 años 
 
 Lanús, argentina
@@ -14,7 +16,7 @@ Lanús, argentina
 Catador de Whiskey y café. Deportista y amante de viajar.
 
 
-#### Julieta Romero
+#### ![Juli](/Images/Emoji_Juli1.png) Julieta Romero
 
 27 años
 
@@ -22,7 +24,7 @@ Bernal, Argentina
 
 Sommelier profesional, especializada en vinos. Región favorita, Valle de Uco
 
-#### Milagros Gaundri
+#### ![Mili](/Images/Emoji_Mili1.png) Milagros Gaundri
 
 18 años
 
