@@ -1,0 +1,49 @@
+*{
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+body{
+    font-family: 'DM Sans', sans-serif;
+}
+li{
+    list-style: none;
+    display: inline;
+}
+a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+li a{
+    color: white ;
+    text-transform: uppercase;
+    font-weight:bold 700;
+    font-size:19px;
+    margin-right: 60px;
+}
+a:hover{
+    color:rgb(151, 233, 253);
+    text-decoration: none;
+}
+/* header */
+header{
+    width: 100%;
+    height: 95px;
+    padding:5px;
+    border-bottom: gray solid 1px;
+    background-color: black;
+    overflow: hidden;
+}
+header .logo img{
+    width: 18%;
+    height: 98px;
+    margin-right: 100px;
+}
+nav{
+    padding-top: 0px;
+    margin-right: 15px;
+}
+nav .ingreso{
+    float: right;
+    margin-top:35px;
+}

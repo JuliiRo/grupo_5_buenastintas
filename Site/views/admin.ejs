@@ -1,11 +1,48 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+<html lang="en">
+<head>
+  <title>Buenastintas - Admin</title>
+    <%- include('partials/head') %> 
+    <link rel="stylesheet" href="/css/">
+</head>
+<body>
+    <main class="principal">
+        <header>
+            <a href="/"><img src="/images/admin/bt.svg" alt=""></a>
+            <h1>Agregar Producto</h1>
+            <!-- Buscar el icono de la cruz -->
+            <a href="/">X</i></a>
+        </header>
+        <section class="form">
+            <div>
+                <h3><label for="">¿Nombre de la bebida?</label></h3>
+                <input type="text" placeholder="Escribir acá" required>
+            </div>
+            <div>
+                <h3>Selecciona la categoria</h3>
+                <select name="categorias" id="algo">
+                    <option value="">Vinos</option>
+                    <option value="">Espumantes</option>
+                    <option value="">Whiskies</option>
+                    <option value="">Aperitivos</option>
+                    <option value="">Cervezas</option>
+                </select>
+            </div>
+            <div>
+                <h3><label for="">Descuento(opcional)</label></h3>
+                <input type="text" placeholder="Escribir acá">
+            </div>
+            <div>
+                <h3><label for="">¿Descuento hasta cuando?(opcional)</label></h3>
+                <input type="date" id="barra" placeholder="" required>
+            </div>
+            <div>
+                <input type="file" placeholder="agregar foto" required>
+            </div>
+            <div>
+                <button type="submit" id="agregar">Agregar </button>
+            </div>
+        </section>
+    </main>
+</body>
 </html>
