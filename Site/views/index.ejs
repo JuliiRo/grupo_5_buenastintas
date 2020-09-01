@@ -1,11 +1,58 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <title><%= title %></title>
-    <link rel='stylesheet' href='/stylesheets/style.css' />
-  </head>
-  <body>
-    <h1><%= title %></h1>
-    <p>Welcome to <%= title %></p>
-  </body>
+<html lang="en">
+<head>
+  <title>Buenastintas - Home</title>
+  <%- include('partials/head') %> 
+  <link rel="stylesheet" href="/css/index.css">
+</head>
+<body>
+  <%- include('partials/header') %> 
+  <!-- Los productos (Bebidas) -->
+  <div>
+    <div>
+      <figure>
+        <img src="" alt="Producto">
+      </figure>
+      <article>
+        <h2>$150.970</h2>
+        <p>Garibaldi</p>
+      </article>
+    </div>
+  
+    <div>
+      <figure>
+        <img src="" alt="Producto">
+      </figure>
+      <article>
+        <h2>$150.970</h2>
+        <span>10% OFF</span>
+        <p>Jack Daniel's</p>
+      </article>
+    </div>
+  
+    <div>
+      <figure>
+        <img src="" alt="Producto">
+      </figure>
+      <article>
+        <h2>$150.970</h2>
+        <p>Licor</p>
+      </article>
+    </div>
+  
+    <div>
+      <figure>
+        <img src="" alt="Producto">
+      </figure>
+      <article>
+        <h2>$150.970</h2>
+        <span>10% OFF</span>
+        <p>Corona</p>
+      </article>
+    </div>
+  </div>
+  
+  <!--ACA VA EL FOOTER-->
+  <%- include('partials/footer') %> 
+</body>
 </html>

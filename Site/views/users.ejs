@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <title>Buenastintas - Iniciar sesión</title>
+    <%- include('partials/head') %> 
+    <link rel="stylesheet" href="/css/users.css">
+</head>
+<body>
+    <%- include('partials/header2') %>
+    <section>
+        <section class="form">
+            <section class="form2">
+                <form action="">
+                    <div class="images">
+                        <img src="/images/login/pngwing.svg" alt="">
+                    </div>
+                    <h1>Inicio de sesión</h1>
+                    <div class="grupo-form">
+                        <label for="">Email:</label>
+                        <input type="email" id="barra" placeholder="Ingresá tu email" required>
+                    </div>
+                    <div class="grupo-form">
+                        <label for="">Contraseña:</label>
+                        <input type="password" id="barra" placeholder="Ingresá tu contraseña" required>   
+                    </div>
+                    <div class="button">
+                        <a href=""><button type="submit">Ingresar</button></a>
+                    </div>
+                    <div id="form">
+                        <a href="">¿Olvidaste tu contraseña?</a>
+                    </div>
+                    <article class="form3">
+                        <div class="algo2">
+                            <a href="/users/register">¿No tienes cuenta? <b>Registrate.</b></a>
+                        </div>
+                    </article>
+                </form>
+            </section>
+        </section> 
+    </section>
+
+    <!-- scripts de bootstrap -->
+  <script
+  src="https://code.jquery.com/jquery-3.5.1.slim.min.js "
+  integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj "
+  crossorigin="anonymous "
+></script>
+<script
+  src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js "
+  integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo "
+  crossorigin="anonymous "
+></script>
+<script
+  src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js "
+  integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI "
+  crossorigin="anonymous "
+></script>
+</body>
+</html>
