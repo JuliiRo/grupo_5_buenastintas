@@ -1,10 +1,56 @@
+/*
+-- IMPORTS
+*/
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&display=swap');
+
+/*
+-- VARIABLES 
+*/
+:root{
+
+    --color-blanco: #f4f4f4;
+    --color-naranja-claro: #f0a500;
+    --color-naranja-oscuro: #cf7500;
+    --color-negro: #000000;
+    --color-violeta: #70416d;
+}
+*{
+    box-sizing: border-box;
+    margin:0
+}
 body {
     padding: 50px;
-    font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
-    
+    font-family: 'DM Sans', 'Roboto';
+   
   }
   
   a {
-    color: #00B7FF;
+    text-decoration: none;
   }
-  
+  a:hover{
+    color: var(--color-naranja-claro);
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.principal{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.principal .titulo h2{
+    text-align: left;
+    font-size: 24px;
+    color: var(--color-negro);
+    padding: 30px;
+}
+
+.principal .contenido{
+    background-color: white;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+} 
