@@ -1,32 +1,47 @@
-<header>
+<header class="container-fluid">
     <div class="conteiner">
         <div class="row">
           <!-- Logo -->
-          <nav class="logo">
+          <nav class="col-5 col-md-2 col-lg-2 logo">
             <a href="/"><img src="/images/logo/logo1.png" alt=""></a>
           </nav>
           <!-- BUSCADOR -->
-          <div>
+          <div class="col-12 col-md-6 col-lg-6">
             <form action="">
               <input type="text" name="search" placeholder="Buscar"/>
-              <button type="submit"><i class="fas fa-search" > </i></button>
+              <button type="submit"><i class="fas fa-search" ></i></button>
              </form>
           </div>
           <!-- barra de navegación -->
-            <nav class="ingreso">
-              <ul>
-                <li><a href="/">Home</a></li>
-                <li><a href="/users">Iniciar sesión</a></li>
-                <li><a href="/users/register">Registro</a></li>
-                <li><a href="/tienda">Tienda</a></li>
-                <li><a href="/tienda/carrito"><i class="fas fa-shopping-cart"></i>Carrito</a></li>
-                <li><a href="/admin">Agregar Producto</a></li>
-                <!-- Link Redes sociales -->
-                <a href=""><i class="fab fa-facebook-square"></i></a>
-                <a href=""><i><i class="fab fa-instagram"></i></i></a>
-                <a href=""><i class="fab fa-twitter"></i></a>
-                <a href=""><i class="fab fa-youtube"></i></a>
-              </ul>
+
+            <nav class="navbar-expand-md">
+              <button
+              class="navbar-toggler burger"
+              type="button"
+              data-toggle="collapse"
+              data-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation">
+              <i class="fas fa-bars"></i>
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="menu navbar-nav mr-auto" >
+                  <li><a href="/">Home</a></li>
+                  <li><a href="/users">Iniciar sesión</a></li>
+                  <li><a href="/users/register">Registro</a></li>
+                  <li><a href="/tienda">Tienda</a></li>
+                  <li><a href="/tienda/carrito"><i class="fas fa-shopping-cart"></i>Carrito</a></li>
+                  <li><a href="/admin">Agregar Producto</a></li>
+                  <!-- Link Redes sociales -->
+                  <li>
+                    <a href=""><i class="fab fa-facebook-square"></i></a>
+                    <a href=""><i><i class="fab fa-instagram"></i></i></a>
+                    <a href=""><i class="fab fa-twitter"></i></a>
+                    <a href=""><i class="fab fa-youtube"></i></a>
+                  </li>
+                </ul>
+              </div>
             </nav>
         </div>
     </div>
