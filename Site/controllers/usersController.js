@@ -1,3 +1,5 @@
+const adminController = require("./adminController")
+
 module.exports = {
      // http://localhost:3000/users/
     login:function(req,res){
