@@ -1,3 +1,15 @@
+/*
+-- VARIABLES 
+*/
+:root{
+
+    --color-blanco: #f4f4f4;
+    --color-naranja-claro: #f0a500;
+    --color-naranja-oscuro: #cf7500;
+    --color-negro: #000000;
+    --color-violeta: #70416d;
+
+}
 body {
     padding: 50px;
     font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;

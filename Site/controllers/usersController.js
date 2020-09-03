@@ -3,14 +3,14 @@ module.exports = {
     login:function(req,res){
         res.render('users', { 
             title: 'Login | Buenas Tintas',
-            css: 'login.css'
+            css: 'users.css'
         })
     },
     // http://localhost:3000/users/register
     register:function(req,res){
         res.render('register', { 
             title: 'Registro | Buenas Tintas',
-            css: 'login.css'
+            css: 'register.css'
         })
     }
 }
