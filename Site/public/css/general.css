@@ -22,10 +22,35 @@
 body {
     padding: 50px;
     font-family: 'DM Sans', 'Roboto';
-    
+   
   }
   
   a {
-    color: #00B7FF;
+    text-decoration: none;
   }
-  
+  a:hover{
+    color: var(--color-naranja-claro);
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+.principal{
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.principal .titulo h2{
+    text-align: left;
+    font-size: 24px;
+    color: var(--color-negro);
+    padding: 30px;
+}
+
+.principal .contenido{
+    background-color: white;
+    margin-bottom: 30px;
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+} 
