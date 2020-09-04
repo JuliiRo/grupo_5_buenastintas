@@ -16,16 +16,28 @@
 .fa-instagram:hover{
   color: violet
 }
-.principal{
-  border: white 1px solid;
-}
-
 .principal article h2{
   display: flex;
   align-items: center;
   text-align: center;
 }
+.banner img{
+  width: 100%;
+  height: 190x;
+
+}
+.contenido{
+  justify-content: space-around
+
+}
 .contenido img{
   width: 90%;
-  
+}
+.contenido a {
+  text-decoration: none;
+  color: black
+}
+a:hover{
+  color: var(--color-naranja-claro);
+  text-decoration: none;
 }
