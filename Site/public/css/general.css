@@ -14,6 +14,7 @@
     --color-naranja-oscuro: #cf7500;
     --color-negro: #000000;
     --color-violeta: #70416d;
+    --color-grisClaro: #ebebeb;
 }
 *{
     box-sizing: border-box;
@@ -22,11 +23,13 @@
 body {
     padding: 50px;
     font-family: 'DM Sans', 'Roboto';
+    font-weight: 300;
    
   }
   
   a {
     text-decoration: none;
+    color: black
   }
   a:hover{
     color: var(--color-naranja-claro);
@@ -38,6 +41,7 @@ li{
 .principal{
     display: flex;
     flex-wrap: wrap;
+    padding: 10px;
 }
 
 .principal .titulo h2{
@@ -48,8 +52,8 @@ li{
 }
 
 .principal .contenido{
-    background-color: white;
-    margin-bottom: 30px;
+    background-color:var(--color-grisClaro);
+    margin-right: 10px;
     border-radius: 5px;
     padding: 5px;
     text-align: center;

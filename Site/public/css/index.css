@@ -16,3 +16,16 @@
 .fa-instagram:hover{
   color: violet
 }
+.principal{
+  border: white 1px solid;
+}
+
+.principal article h2{
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.contenido img{
+  width: 90%;
+  
+}

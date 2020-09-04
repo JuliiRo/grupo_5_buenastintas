@@ -4,40 +4,39 @@
 <body>
   <%- include('partials/header') %> 
   <!-- Los productos (Bebidas) -->
-  <div class="container">
-    <section>
-      <div class="row productos">
-        <div class="col-12 col-md-6 col-lg-3">
-          <div class="contenido">
+  <section class="principal">
+    <div class="container">
+      <div class="productos">
+        <div class="row">
+          <div class="col-12 col-md-6 col-lg-3 contenido">
             <figure>
-              <img src="/images/home/vinos4.jpg" alt="">
+              <a href="/tienda"><img src="/images/home/vinos6.jpg" alt=""></a>
             </figure>
             <article>
-              <h2>Vinos</h2>
-              <span>5% OFF</span>
+              <a href="/tienda"><h2>Vinos</h2></a>
             </article>
+            <p>Conocé la mejor y más variada colección de vinos que tenemos para vos</p>
           </div>
-    
-          <div class="contenido">
+          <div class="col-12 col-md-6 col-lg-3 contenido">
             <figure>
-              <img src="/images/home/whiskies3.jpg" alt="Producto">
+              <a href="/tienda"><img src="/images/home/whiskies2.jpg" alt="Producto"></a>
             </figure>
             <article>
-              <h2>Whiskies</h2>
-              <span>5% OFF</span>
+              <a href="/tienda"><h2>Whiskies</h2></a>
             </article>
+            <p>Nuestros whiskies premium te están esperando</p>
           </div>
-    
-          <div class="contenido">
+          <div class="col-12 col-md-6 col-lg-3 contenido">
             <figure  >
-              <img src="/images/home/cervezas.jpg" alt="Producto">
+              <a href="/tienda"><img src="/images/home/cervezas.jpg" alt="Producto"></a>
             </figure>
             <article>
-              <h2>Cervezas</h2>
-              <span>50% OFF</span>
+              <a href="/tienda"><h2>Cervezas</h2></a>
             </article>
+            <p>Las mejores opciones de cervezas para compartir con amigos</p>
           </div>
-    
+        </div>
+      </div>
           <!-- <div class="contenido">
             <figure >
               <img src="/images/home/aperitivos.jpg" alt="Producto">
@@ -47,20 +46,11 @@
               <span>10% OFF</span>
             </article>
           </div> -->
-    
-          <div  class="contenido">
-            <figure >
-              <img src="/images/home/espumantes.jpg" alt="Producto">
-            </figure>
-            <article>
-              <h2>Espumantes</h2>
-              <span>10% OFF</span>
-            </article>
-          </div>
+        </div>
         </div>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
   <!--ACA VA EL FOOTER-->
   <%- include('partials/footer') %> 
 </body>
