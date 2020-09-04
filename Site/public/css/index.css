@@ -22,6 +22,7 @@
   text-align: center;
 }
 .banner{
+  width: 100%;
   display: none;
 }
 .contenido{
@@ -48,6 +49,6 @@ a:hover{
 
 @media (min-width:1024px){
   .banner{
-    display: block;
+    display: inline-flex;
   }
 }
