@@ -24,8 +24,8 @@ body {
     padding: 50px;
     font-family: 'DM Sans', 'Roboto';
     font-weight: 300;
-   
-  }
+    background-image: url('../images/home/71190047-vector-dibujado-a-mano-ilustración-el-lúpulo-y-la-cebada-patrón-sin-fisuras-en-el-fondo-de-color-beige-patrón-de-.jpg');
+}
   
   a {
     text-decoration: none;
@@ -42,6 +42,7 @@ li{
     display: flex;
     flex-wrap: wrap;
     padding: 10px;
+
 }
 
 .principal .titulo h2{
@@ -57,4 +58,5 @@ li{
     border-radius: 5px;
     padding: 5px;
     text-align: center;
+    
 } 
