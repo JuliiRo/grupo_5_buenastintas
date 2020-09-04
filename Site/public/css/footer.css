@@ -1,0 +1,61 @@
+
+/*** Generales ***/
+*{
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+a{
+    text-decoration: none;
+    color: white;
+}
+a:hover{
+    color: #f0a500;
+    text-decoration: none;
+}
+li{
+    list-style: none;
+}
+/*
+FOOTER
+*/
+footer{
+    background-color: black;
+    overflow: hidden;
+    margin-top: 35px;
+}
+
+footer #barra{
+    font-size: 17px;
+    border: black 1px solid;
+    margin: 3px;
+}
+
+footer .separar{
+    float: left;
+    margin: 20px;
+}
+
+textarea{
+    margin-left: 20px;
+    border: black 1px solid;
+    resize: none;
+}
+footer .nuestroContacto{
+    overflow: hidden;
+}
+
+footer .contacto{
+    float: right;
+    padding-right: 70px;
+    padding-top: 27px;
+}
+
+
+footer button{
+    background-color:black;
+    color:white;
+    border: white 1px solid;
+    border-radius: 4px;
+    margin-top: 6px;
+    padding: 4px 10px ;
+}
