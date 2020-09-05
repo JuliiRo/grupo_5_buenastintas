@@ -1,1 +1,78 @@
 @import "style.css";
+/* MINI BARRA */
+.main-nav .algo{
+    background-color: black;
+    height: 60px;
+    width: 90%;
+    margin-top: 15px;
+
+}
+.main-nav li{
+    display: inline-block;
+    padding: 20px;
+    padding-top: 10px;
+    margin-top: 10px;
+    height: 40px;
+    padding-right:45px;
+    border-right: white 1px solid;
+    text-transform: uppercase;
+}
+.main-nav li:last-child{
+    border: none;
+    padding-right: 0px;
+}
+
+/* PRODUCTOS */
+.principal .contenido{
+    background-color:var(--color-grisClaro);
+    border-radius: 5px;
+    padding: 5px;
+    text-align: center;
+    margin-bottom: 20px;
+} 
+.contenido img{
+    width: 80%;
+}
+p{
+    color: black;
+    font-size: 20px;
+}
+
+/* --- AJUSTES TIENDA - VERSION PARA TABLET (768px) --- */
+
+@media(max-width:768px){
+    /* MINI BARRA */
+    .main-nav .algo{
+        background-color: black;
+        height: 50%;
+        width: 90%;
+        text-align: center;
+    }
+    .main-nav li{
+        display: block;
+        padding: 10px;
+        border-right: none;
+        border-bottom: white 1px solid;
+    }
+    .main-nav li:last-child{
+        border: none;
+    }
+    
+}
+/* --- AJUSTES TIENDA - VERSION PARA MOVILES (768px) --- */
+
+@media(max-width:375px){
+    /* MINI BARRA */
+    .main-nav .algo{
+        width:100%;
+    }
+    .main-nav li{
+        width:100%;
+        padding-right: 70px;
+        border-bottom: none;
+    }
+    .main-nav li:last-child{
+        padding-right: 70px;
+    }
+}
+
