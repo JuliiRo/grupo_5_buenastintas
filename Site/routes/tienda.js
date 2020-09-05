@@ -5,5 +5,6 @@ const tiendaController = require('../controllers/tiendaController')
 /* GET home page. */
 router.get('/', tiendaController.tienda);
 router.get('/carrito', tiendaController.carrito)
+router.get('/detalle', tiendaController.detalle)
  
 module.exports = router

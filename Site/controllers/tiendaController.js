@@ -15,5 +15,12 @@ module.exports = {
             title: 'Carrito | Buenas tintas',
             css: 'carrito.css',
         })
-    }
+    },
+        //http://localhost:3000/tienda/detalle
+    detalle:function(req,res){
+        res.render('detalleProducto', {
+            title: 'Detalle de Producto | Buenas tintas',
+            css: 'detalleProducto.css',
+        })
+    },
 }
