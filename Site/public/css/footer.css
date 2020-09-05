@@ -4,7 +4,7 @@
     box-sizing: border-box;
     margin: 0 auto;
 }
-a{
+a, p, h4{
     text-decoration: none;
     color: white;
 }
@@ -14,48 +14,105 @@ a:hover{
 }
 li{
     list-style: none;
+    color: white;
 }
 /*
 FOOTER
 */
-footer{
+footer {
     background-color: black;
-    overflow: hidden;
     margin-top: 35px;
+    padding: 5px;
 }
-
-footer #barra{
+.footer article{
+    display: flex;
+}
+.footer #barra{
     font-size: 17px;
     border: black 1px solid;
     margin: 3px;
 }
-
-footer .separar{
-    float: left;
+.footer .separador{
+    padding: 0;
     margin: 20px;
 }
-
 textarea{
+    display: none;
     margin-left: 20px;
     border: black 1px solid;
     resize: none;
 }
-footer .nuestroContacto{
-    overflow: hidden;
+
+.footer .contacto{
+    font-size: 20px;
+
 }
 
-footer .contacto{
-    float: right;
-    padding-right: 70px;
-    padding-top: 27px;
-}
-
-
-footer button{
+.footer button{
     background-color:black;
     color:white;
     border: white 1px solid;
     border-radius: 4px;
     margin-top: 6px;
-    padding: 4px 10px ;
+    padding: 4px 25px ;
+    margin-left: 50px;
+}
+
+/* --- AJUSTES FOOTER - VERSION PARA TABLET (768px) --- */
+
+@media(min-width:768px){
+    .footer{
+        padding:15px;
+    }
+    .footer #barra{
+        font-size: 19px;
+        border: black 1px solid;
+        margin: 3px;
+        margin-left: 30px;
+        width: 550px;
+    }
+    .footer button{
+        margin-left: 220px;
+        padding: 5px 50px ;
+    }
+    ul li{
+        display: inline-block;
+        margin-right: 20px;
+    }
+}
+
+
+/* --- AJUSTES HOME - VERSION PARA ESCRITORIO (1024px) --- */
+
+@media(min-width:1024px){
+    .footer{
+        padding:20px;
+    }
+    
+    .footer #barra{
+        font-size: 19px;
+        border: black 1px solid;
+        margin: 3px;
+        width: 250px;
+    }
+    .footer button{
+        margin-left: 60px;
+        padding: 5px 30px ;
+    }
+    textarea{
+        display: block;
+        margin-left: 0px;
+        border: black 1px solid;
+        resize: none;
+    }
+    .footer .contacto{
+        font-size: 25px;
+        margin-top:17px;
+    }
+
+    ul li{
+        display:block;
+        font-size:17px;
+        margin-right: 20px;
+    }
 }
