@@ -1,1 +1,29 @@
 @import "style.css";
+
+.principal{
+    padding: 0px;
+}
+.productos{
+    background-color: var(--color-grisClaro);
+}
+.contenido{
+    align-items: center;
+    margin-bottom: 5px;
+    border-radius: 10%;
+  }
+  .contenido img{
+    width: 90%;
+    height: 100%;
+    border-radius: 10%;
+  }
+  .contenido a {
+    text-decoration: none;
+    color: black
+  }
+  a:hover{
+    color: var(--color-naranja-claro);
+    text-decoration: none;
+  }
+  .contenido .titulo{
+    align-content: center;
+  }
