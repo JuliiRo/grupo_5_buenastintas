@@ -1,2 +1,47 @@
 
 
+body{
+    font-family: 'DM Sans', sans-serif;
+}
+li{
+    list-style: none;
+    display: inline;
+}
+a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+li a{
+    color: white;
+    text-transform: uppercase;
+    font-weight:bold 700;
+    font-size: 13px;
+}
+a:hover{
+    color:rgb(151, 233, 253);
+    text-decoration: none;
+}
+/* header */
+header{
+    background-color: black;
+    padding:5px;
+}
+header .logo img{
+    width: 100%;
+    height: 80%;
+}
+header nav{
+  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: left;
+}
+header nav button.burger{
+  background-color:black;
+  color:white;
+  border: white 1px solid;
+  border-radius: 4px;
+  margin-top: 0px;
+  padding: 8px 15px ;
+}
+
