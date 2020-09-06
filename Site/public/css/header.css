@@ -3,7 +3,7 @@
 
 header {
   background-color:black;
-  padding:5px;
+  padding:20px;
  
 }
     header .logo img{ 
@@ -11,40 +11,26 @@ header {
     height: 80%;
      }
 
-     header form{
-      position: relative;
-      display: flex;
-      align-items: center;
-      font-size: 0.8rem;
-   }
-
-   header form input{
-    border: solid 1px var(--color-grisClaro);
-    display: block;
-    width: 80%;
-   padding: 7px 20px 7px 7px;
-   border-radius: 2px;
-   height: 40px;
-}
-
-header form button{
+header form{
   position: relative;
-  right: 2px;
-  height: 70%;
-  background-color:red;
-  border: none;
-  border-left: solid 1px var(--color-grisClaro);
-  color: var(--color-grisOscuro);
-  cursor: pointer;
+  display: flex;
+  align-items: right;
+  font-size: 0.8rem;
+
 }
-header form input:focus,
-form button:focus {
-    outline: none;
-    box-shadow: none;
+
+header form input{
+  border: solid 1px var(--color-red);
+display: block;
+width: 100%;
+padding: 7px 30px 7px 7px;
+border-radius: 5px;
+height: 40px;
 }
+
 header form button{
-  position: right;
-  right: 30px;
+  position: absolute;
+  right: 2px;
   height: 60%;
   background-color:violet;
   border: none;
@@ -52,6 +38,7 @@ header form button{
   color: var(--color-grisOscuro);
   cursor: pointer;
 }
+
 
 
 
