@@ -1,0 +1,74 @@
+@import "style.css";
+/*-- HEADER --*/
+
+header {
+  background-color:black;
+  padding:5px;
+ 
+}
+    header .logo img{ 
+    width: 100%;
+    height: 80%;
+     }
+
+     header form{
+      position: relative;
+      display: flex;
+      align-items: center;
+      font-size: 0.8rem;
+   }
+
+   header form input{
+    border: solid 1px var(--color-grisClaro);
+    display: block;
+    width: 80%;
+   padding: 7px 20px 7px 7px;
+   border-radius: 2px;
+   height: 40px;
+}
+
+header form button{
+  position: relative;
+  right: 2px;
+  height: 70%;
+  background-color:red;
+  border: none;
+  border-left: solid 1px var(--color-grisClaro);
+  color: var(--color-grisOscuro);
+  cursor: pointer;
+}
+header form input:focus,
+form button:focus {
+    outline: none;
+    box-shadow: none;
+}
+header form button{
+  position: right;
+  right: 30px;
+  height: 60%;
+  background-color:violet;
+  border: none;
+  border-left: solid 1px var(--color-grisClaro);
+  color: var(--color-grisOscuro);
+  cursor: pointer;
+}
+
+
+
+
+
+
+
+  
+   
+
+
+    
+
+
+   
+
+     
+  
+
+ 

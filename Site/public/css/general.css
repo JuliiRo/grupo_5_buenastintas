@@ -9,8 +9,8 @@
 */
 :root{
 
-    --color-blanco: #f4f4f4;
-    --color-naranja-claro: #f0a500;
+    --color-blanco: white;
+    --color-naranja-claro: #f1bc49ef;
     --color-naranja-oscuro: #cf7500;
     --color-negro: #000000;
     --color-violeta: #70416d;

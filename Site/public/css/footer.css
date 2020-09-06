@@ -1,9 +1,7 @@
 
 /*** Generales ***/
-*{
-    box-sizing: border-box;
-    margin: 0 auto;
-}
+    
+
 a, p, h4{
     text-decoration: none;
     color: white;
@@ -23,7 +21,7 @@ footer {
     background-color: black;
     margin-top: 35px;
     padding: 5px;
-}
+ }
 .footer article{
     display: flex;
 }
@@ -41,7 +39,8 @@ textarea{
     margin-left: 20px;
     border: black 1px solid;
     resize: none;
-}
+     }
+
 
 .footer .contacto{
     font-size: 20px;
