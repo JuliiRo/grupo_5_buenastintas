@@ -5,49 +5,39 @@
 
   <body>
     <%- include('partials/header') %> 
-    <section>
-      <div>
-        <div>
-          <li>Productos</li>
-          <li>Precio U.</li>
-          <li>Cantidad</li>
-          <li>Total</li>
+    <section class="container carrito">
+      <div class="">
+        <div class="row encabezado">
+          <li class="col-3">Productos</li>
+          <li class="col-3 unidad">Precio U.</li>
+          <li class="col-3">Cantidad</li>
+          <li class="col-3">Total</li>
         </div>
       </div>
       <div>
         <div>
-          <ol>
-            <li>
-              <img src="/images/home/vinos4.jpg" alt="Producto">
-              <span>$1.300</span>
-              <span>Cantidad</span>
-              <span>Total</span>
-            </li>
-            <li>
+          <ol class="container detalle">
+            <li class="row producto">
               <img src="/images/home/whiskies3.jpg" alt="Producto">
-              <span>$1.300</span>
-              <span>Cantidad</span>
-              <span>Total</span>
+              <span class="col-3 unidad">$1.300</span>
+              <span class="col-3">1 unidad</span>
+              <span class="col-3">$1.300</span>
             </li>
-            <li>
+            <li class="row producto">
               <img src="/images/home/cervezas.jpg" alt="Producto">
-              <span>$1.300</span>
-              <span>Cantidad</span>
-              <span>Total</span>
+              <span class="col-3 unidad">$1.300</span>
+              <span class="col-3">1 unidad</span>
+              <span class="col-3">$1.300</span>
             </li>
-            <li>
+            <li class="row producto">
               <img src="/images/home/brahma.jpg" alt="Producto">
-              <span>$1.300</span>
-              <span>Cantidad</span>
-              <span>Total</span>
+              <span class="col-3 unidad">$1.300</span>
+              <span class="col-3">1 unidad</span>
+              <span class="col-3">$1.300</span>
             </li>
-            <li>
-              <img src="/images/home/espumantes.jpg" alt="Producto">
-              <span>$1.300</span>
-              <span>Cantidad</span>
-              <span>Total</span>
-            </li>
+            <span class="total">3.900$</span>
           </ol>
+
         </div>
       </div>
     </section>

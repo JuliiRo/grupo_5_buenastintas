@@ -46,6 +46,9 @@ a:hover{
 .contenido .titulo{
   align-content: center;
 }
+.contenido p{
+  color: var(--color-violeta);
+}
 
 @media (min-width:1300px){
   .banner{
