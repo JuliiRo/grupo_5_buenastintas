@@ -12,7 +12,7 @@ module.exports = {
     register:function(req,res){
         res.render('register', { 
             title: 'Registro | Buenas Tintas',
-            css: 'register.css'
+            css: 'users.css'
         })
     }
 }
