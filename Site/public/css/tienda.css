@@ -1,10 +1,13 @@
 @import "style.css";
 /* MINI BARRA */
+.main-nav{
+    padding-left:11%;
+}
 .main-nav .algo{
     background-color: black;
     height: 60px;
-    width: 90%;
-   margin-top: 15px;
+    width: 87%;
+    margin-top: 15px;
 
 }
 .main-nav li{
@@ -13,7 +16,8 @@
     padding-top: 10px;
     margin-top: 10px;
     height: 40px;
-    padding-right:45px;
+    margin-left:19px;
+    padding-right: 70px;
     border-right: white 1px solid;
     text-transform: uppercase;
 }
@@ -39,7 +43,18 @@ p{
 }
 
 /* --- AJUSTES TIENDA - VERSION PARA TABLET (768px) --- */
-
+@media(max-width:1024px){
+    .main-nav{
+        padding-left:4%;
+    }
+    .main-nav .algo{
+        width: 96%;
+    }
+    .main-nav li{
+        margin-left:6px;
+        padding-right:45px;
+    }
+}
 @media(max-width:768px){
     /* MINI BARRA */
     .main-nav .algo{
