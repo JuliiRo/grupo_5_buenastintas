@@ -1,0 +1,78 @@
+@import "general.css";
+*{
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+li{
+    list-style: none;
+}
+a{
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+}
+li a{
+    color: white;
+    text-transform: uppercase;
+    font-weight:bold 700;
+    font-size: 13px;
+}
+a:hover{
+    color:var(--color-naranja-claro);
+    text-decoration: none;
+}
+/* header */
+header{
+    background-color: black;
+    padding:5px;
+}
+header .logo img{
+    width: 100%;
+    height: 80%;
+}
+header nav{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+header nav button.burger{
+  background-color:black;
+  color:white;
+  border: white 1px solid;
+  border-radius: 4px;
+  margin-top: 0px;
+  padding: 8px 15px ;
+}
+
+/* --- AJUSTES VERSION PARA TABLET (768px) --- */
+
+@media(min-width:768px){
+    /* header */
+
+    header .logo img{
+        width: 50%;
+        height:90%;
+    }
+    li{
+        width: 150px;
+    }
+    li a{
+        display: inline;
+        font-size: 15px;
+        padding: 25px;
+    }
+    li a:last-child{
+        padding:0px
+    }
+}
+
+
+/* --- AJUSTES VERSION PARA ESCRITORIO (1024px) --- */
+
+@media(min-width:1440px){
+       /* header */
+       header .logo img{
+            padding-right:100px;
+        }
+}

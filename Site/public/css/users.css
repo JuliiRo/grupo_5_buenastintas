@@ -1,50 +1,91 @@
-@import "general.css";
-*{
-    box-sizing: border-box;
-    margin: 0 auto;
+@import "header2.css";
+
+/* Formulario */
+.form{
+    background-color: rgba(255, 255, 255, 0.3);
+    display: flex;
+    justify-content: center;
+}
+.grupo-form{
+    font-size: 20px;
 }
 
-body{
-    font-family: 'DM Sans', sans-serif;
-}
-li{
-    list-style: none;
-    display: inline;
-}
-a{
-    text-decoration: none;
-    color: rgb(0, 0, 0);
-}
-li a{
-    color: white;
-    text-transform: uppercase;
-    font-weight:bold 700;
-    font-size: 13px;
-}
-a:hover{
-    color:rgb(151, 233, 253);
-    text-decoration: none;
-}
-/* header */
-header{
-    background-color: black;
-    padding:5px;
-}
-header .logo img{
+.form .images{
+    padding-top: 10px;
     width: 100%;
-    height: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
 }
-header nav{
-  width: 100%;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
+h1{
+    font-size: 40px;
+    font-weight: bold;
+    text-align: center;
+    text-transform: uppercase;
+    margin: 20px 0;
+
 }
-header nav button.burger{
-  background-color:black;
-  color:white;
-  border: white 1px solid;
-  border-radius: 4px;
-  margin-top: 0px;
-  padding: 8px 15px ;
+.grupo-form label, .grupo-form input{
+    display: block; 
+    margin-bottom: 10px;
+}
+.grupo-form input{
+    border: black solid 1px;
+    border-radius: 4px;
+}
+.grupo-form2{
+    padding: 15px;
+    margin-top: 10px;
+}
+#grupo-formu{
+    margin-left: 30px;
+}
+#contra{
+    padding-left:60px;
+    margin-top: 20px;
+}
+.form button{
+    background-color:black;
+    color:white;
+    border: white 1px solid;
+    border-radius: 4px;
+    margin-top: 2px;
+    padding:2px 25px ;
+    margin-left: 55px;
+}
+.button-algo{
+    margin-left: 40px;
+    margin-top: 20px;
+} 
+.form2{
+    border-top: black solid 1px;
+    margin-top: 15px;
+    padding-top: 15px;
+    margin-bottom: 15px;
+}
+#registrarse{
+    padding-left: 50px;
+}
+#iniciarsesion{
+    padding-left: 15px;
+}
+/* --- AJUSTES VERSION PARA TABLET (768px) --- */
+
+@media(min-width:768px){
+    /* Formulario */
+    .form{
+        width: 50%;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+}
+
+
+/* --- AJUSTES VERSION PARA ESCRITORIO (1024px) --- */
+
+@media(min-width:1024px){
+       /* Formulario */
+       .form{
+        width: 40%;
+    }
 }

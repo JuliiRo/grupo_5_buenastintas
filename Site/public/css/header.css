@@ -39,6 +39,21 @@ header form button{
   cursor: pointer;
 }
 
+header nav{
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+header nav button.burger{
+  background-color:black;
+  color:white;
+  border: white 1px solid;
+  border-radius: 4px;
+  margin-top: 0px;
+  padding: 8px 15px ;
+}
+
 
 
 

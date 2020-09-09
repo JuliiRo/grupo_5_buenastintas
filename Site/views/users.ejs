@@ -3,38 +3,35 @@
     <%- include('partials/head') %> 
 <body>
     <%- include('partials/header2') %>
-    <section>
+    <section class="formulario">
         <section class="form">
-            <section class="form2">
-                <form action="">
-                    <div class="images">
-                        <img src="/images/login/pngwing.svg" alt="">
+            <form action="">
+                <div class="images">
+                    <img src="/images/login/pngwing.svg" alt="">
+                </div>
+                <h1>Iniciar sesión</h1>
+                <div class="grupo-form" id="grupo-formu">
+                    <label for="">Nombre o email:</label>
+                    <input type="email" id="barra" placeholder="Ingresá tu email" required>
+                </div>
+                <div class="grupo-form" id="grupo-formu">
+                    <label for="">Contraseña:</label>
+                    <input type="password" id="barra" placeholder="Ingresá tu contraseña" required>   
+                </div>
+                <div class="button-algo">
+                    <a href=""><button type="submit">Ingresar</button></a>
+                </div>
+                <div id="contra">
+                    <a href="">¿Olvidaste tu contraseña?</a>
+                </div>
+                <article class="form2" id="registrarse">
+                    <div class="algo2">
+                        <a href="/users/register">¿No tienes cuenta? <b>Registrate.</b></a>
                     </div>
-                    <h1>Inicio de sesión</h1>
-                    <div class="grupo-form">
-                        <label for="">Email:</label>
-                        <input type="email" id="barra" placeholder="Ingresá tu email" required>
-                    </div>
-                    <div class="grupo-form">
-                        <label for="">Contraseña:</label>
-                        <input type="password" id="barra" placeholder="Ingresá tu contraseña" required>   
-                    </div>
-                    <div class="button">
-                        <a href=""><button type="submit">Ingresar</button></a>
-                    </div>
-                    <div id="form">
-                        <a href="">¿Olvidaste tu contraseña?</a>
-                    </div>
-                    <article class="form3">
-                        <div class="algo2">
-                            <a href="/users/register">¿No tienes cuenta? <b>Registrate.</b></a>
-                        </div>
-                    </article>
-                </form>
-            </section>
-        </section> 
-    </section>
-
+                </article>
+            </form>
+        </section>
+    </section> 
     <!-- scripts de bootstrap -->
   <script
   src="https://code.jquery.com/jquery-3.5.1.slim.min.js "
