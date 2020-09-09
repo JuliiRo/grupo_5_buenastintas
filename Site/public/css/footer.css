@@ -13,6 +13,7 @@ a:hover{
 li{
     list-style: none;
     color: white;
+    display: block;
 }
 /*
 FOOTER
