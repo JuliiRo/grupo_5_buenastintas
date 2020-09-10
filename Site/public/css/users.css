@@ -28,6 +28,7 @@ h1{
 .grupo-form label, .grupo-form input{
     display: block; 
     margin-bottom: 10px;
+    margin-left: 30px;
 }
 .grupo-form input{
     border: black solid 1px;
@@ -36,9 +37,6 @@ h1{
 .grupo-form2{
     padding: 15px;
     margin-top: 10px;
-}
-#grupo-formu{
-    margin-left: 30px;
 }
 #contra{
     padding-left:60px;
