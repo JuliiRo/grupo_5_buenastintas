@@ -5,11 +5,11 @@
      "nombre": "malbec",
      "varietal": "malbec",
      "año": 2018,
-     "price": 100,
-     "discount": 0,
+     "price": 10000,
+     "discount": 50,
      "category": "vino tinto",
-     "description": "lorem ipsum",
-     "image": "img-cafetera-moulinex.jpg"
+     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae dignissimos eligendi repellat fugiat sit!",
+     "image": "espumantes.jpg"
     },
     {
         "id": 2,

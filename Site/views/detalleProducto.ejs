@@ -15,12 +15,14 @@
                       </p>
                   </div>
                   <div class="col-12 col-lg-4 datos">
-                      <h3 class="my-4">
-                         
+                      <h2 class="my-4">
                          <%= producto.nombre %> 
-                      </h3>
+                      </h2>
                       <h4 class="my-4">
                         <%= producto.bodega %> 
+                      </h4>
+                      <h4>
+                        <%= producto.varietal %> <%= producto.año %> 
                       </h4>
                       <span><strike>$<%= producto.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") %></strike> <strong> <%= producto.discount %>  % OFF</strong></span>
                       <h2>
