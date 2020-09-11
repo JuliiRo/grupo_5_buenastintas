@@ -18,9 +18,14 @@ module.exports = {
     },
         //http://localhost:3000/tienda/detalle
     detalle:function(req,res){
+        idBebida = req.params.id;
+        let producto = dbProducts.filter(producto=>{
+            return producto.id == idBebida
+        })
         res.render('detalleProducto', {
             title: 'Detalle de Producto | Buenas tintas',
             css: 'detalleProducto.css',
+            producto:producto[0],
         })
     },
 }

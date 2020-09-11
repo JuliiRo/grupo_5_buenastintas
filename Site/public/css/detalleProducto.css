@@ -1,40 +1,45 @@
 @import "style.css";
 
-.principal{
-    padding: 0px;
-    overflow: hidden;
+.principales{
+  margin-top: 25px;
 }
 .productos{
-    background-color: var(--color-grisClaro);
+  background-color:var(--color-grisClaro);
 }
-.contenido{
-  align-items: center;
-    margin-bottom: 5px;
-    border-radius: 10%;
-  }
-  .contenido img{
-    width: 60%;
-    height: 80%;
-    border-radius: 10%;
-  }
-  .contenido a {
-    text-decoration: none;
-    color: black
-  }
-  a:hover{
-    color: var(--color-naranja-claro);
-    text-decoration: none;
-  }
-  .contenido .titulo{
-    align-content: center;
-  }
-  p{
-    color: var(--color-violeta);
-    
-  }
-  
-  @media(min-width:1068px){
-    p{
-    font-size:1.3rem;
-    }
+.productos img{
+    width: 100%;
 }
+p, .productos span{
+  color: var(--color-violeta);
+  font-size: 18px;
+  text-align: left;
+}
+.productos h2, .productos h3, .productos h4 {
+    margin-top: 30px;
+    color: var(--color-negro);
+    text-align: left;
+}
+.productos .contenido {
+    padding: 15px;
+}
+.productos button {
+    background-color: var(--color-violeta);
+    border: 0;
+    color: var(--color-blanco);
+    width: 100%;
+    border-radius: 8px;
+    padding: 12px;
+    text-transform: uppercase;
+    margin-top: 30px;
+}
+/*
+.addProduct .categorias {
+    padding: 40px 40px 20px 40px;
+}
+
+.addProduct .formulario {
+    padding: 20px 40px 40px 40px;
+}
+.addProduct textarea{
+    resize: none;
+} */

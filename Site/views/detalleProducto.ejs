@@ -1,20 +1,38 @@
   <%- include('partials/head') %> 
   <%- include('partials/header') %> 
-  <div>
     <div class="container">
-      <div class="row productos">
-        <div class="principal">
-          <figure class="col-12 col-md-6 col-lg-6 contenido">
-              <img src="/images/home/brahma.jpg" alt="">
-          </figure>
-          <article class="col-12 col-md-5 col-lg-5 contenido">
-            <h2>Nombre del producto</h2>
-            <h3>$1.300</h3>
-             <span>10% OFF</span>
-             <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Possimus aspernatur labore error quam minus nihil tenetur numquam velit, adipisci perferendis voluptates necessitatibus ea ipsam quae ipsum nemo enim? Cum, est!</p>
-            </article>
+      <div class="principales">
+        <div class="row productos">
+          <div class="contenido">
+            <div class="contenido text-left">
+              <div class="row">
+                  <div class="col-12 col-lg-8">
+                      <figure class="text-center">
+                          <img src="/images/home/<%=producto.image%>" alt="" class="img-fluid">
+                      </figure>
+                      <p>
+                         <%= producto.description %> 
+                      </p>
+                  </div>
+                  <div class="col-12 col-lg-4 datos">
+                      <h3 class="my-4">
+                         
+                         <%= producto.nombre %> 
+                      </h3>
+                      <h4 class="my-4">
+                        <%= producto.bodega %> 
+                      </h4>
+                      <span><strike>$<%= producto.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") %></strike> <strong> <%= producto.discount %>  % OFF</strong></span>
+                      <h2>
+                        $<%- (producto.price - producto.price * producto.discount / 100).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") %> 
+                      </h2>
+                      <button>Comprar ahora</button>
+                  </div>
+              </div>
+            </div>
+          </div>
         </div>
+      </div>
     </div>
-    
   <!--ACA VA EL FOOTER-->
   <%- include('partials/footer') %> 
