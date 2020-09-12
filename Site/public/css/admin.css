@@ -3,6 +3,12 @@
 body{
     font-family: 'DM Sans', sans-serif;
 }
+.opciones{
+    overflow: hidden;
+}
+.opciones .opcion{
+    float: left;
+}
 li{
     list-style: none;
     display: inline;

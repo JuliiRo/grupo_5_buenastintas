@@ -1,20 +1,20 @@
 [
     {
-     "id": 1,
-     "bodega": "Catena Zapata",
-     "nombre": "malbec",
-     "varietal": "malbec",
-     "año": 2018,
-     "price": 10000,
-     "discount": 50,
-     "category": "vino tinto",
-     "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae dignissimos eligendi repellat fugiat sit!",
-     "image": "undefined.jpg"
+        "id": 1,
+        "bodega": "Catena Zapata",
+        "nombre": "Catena Zapata",
+        "varietal": "malbec",
+        "año": "2018",
+        "price": 1000,
+        "discount": 50,
+        "category": "vino tinto",
+        "description": "Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae dignissimos eligendi repellat fugiat sit! CATENA!!!!ZAPATA!!!!",
+        "image": "undefined.jpg"
     },
     {
         "id": 2,
         "bodega": "Latitud 33",
-        "nombre": "Chardonnay",
+        "nombre": "Latitud 33",
         "varietal": "Chardonnay",
         "año": 2019,
         "price": 100,
@@ -22,9 +22,11 @@
         "category": "vino blanco",
         "description": "lorem ipsum",
         "image": "undefined.jpg"
-       }, {
+    },
+    {
         "id": 3,
         "bodega": "Rutini Wines",
+        "nombre": "Rutini Wines",
         "varietal": "Cabernet Sauvignon",
         "año": 2016,
         "price": 100,
@@ -32,7 +34,8 @@
         "category": "vino tinto",
         "description": "lorem ipsum",
         "image": "undefined.jpg"
-       }, {
+    },
+    {
         "id": 4,
         "bodega": "Norton",
         "nombre": "Grüner Veltliner",
@@ -43,7 +46,8 @@
         "category": "espumante",
         "description": "lorem ipsum",
         "image": "undefined.jpg"
-       }, {
+    },
+    {
         "id": 5,
         "bodega": "Zuccardi",
         "nombre": "Serie A",
@@ -54,7 +58,8 @@
         "category": "vino tinto",
         "description": "lorem ipsum",
         "image": "undefined.jpg"
-       }, {
+    },
+    {
         "id": 6,
         "bodega": "Jack Danniels",
         "nombre": "",
@@ -65,7 +70,8 @@
         "category": "whisky",
         "description": "lorem ipsum",
         "image": "undefined.jpg"
-       }, {
+    },
+    {
         "id": 7,
         "bodega": "Johnnie Walker",
         "nombre": "Red label",
@@ -76,7 +82,8 @@
         "category": "whisky",
         "description": "lorem ipsum",
         "image": "undefined.jpg"
-       }, {
+    },
+    {
         "id": 8,
         "bodega": "Johnnie Walker",
         "nombre": "Black label",
@@ -87,7 +94,8 @@
         "category": "whisky",
         "description": "lorem ipsum",
         "image": "undefined.jpg"
-       }, {
+    },
+    {
         "id": 9,
         "bodega": "Campari",
         "nombre": "",
@@ -98,7 +106,8 @@
         "category": "aperitivo",
         "description": "lorem ipsum",
         "image": "undefined.jpg"
-       }, {
+    },
+    {
         "id": 10,
         "bodega": "fernet",
         "nombre": "",
@@ -109,7 +118,8 @@
         "category": "aperitivo",
         "description": "lorem ipsum",
         "image": "undefined.jpg"
-       }, {
+    },
+    {
         "id": 11,
         "bodega": "gancia",
         "nombre": "",
@@ -120,7 +130,8 @@
         "category": "aperitivo",
         "description": "lorem ipsum",
         "image": "undefined.jpg"
-       }, {
+    },
+    {
         "id": 12,
         "bodega": "Corona",
         "nombre": "",
@@ -131,7 +142,8 @@
         "category": "cerveza",
         "description": "lorem ipsum",
         "image": "undefined.jpg"
-       }, {
+    },
+    {
         "id": 13,
         "bodega": "Andes",
         "nombre": "",
@@ -142,7 +154,8 @@
         "category": "cerveza",
         "description": "lorem ipsum",
         "image": "undefined.jpg"
-       }, {
+    },
+    {
         "id": 14,
         "bodega": "Smirnoff",
         "nombre": "",
@@ -153,7 +166,8 @@
         "category": "aperitivos",
         "description": "lorem ipsum",
         "image": "undefined.jpg"
-       }, {
+    },
+    {
         "id": 15,
         "bodega": "Ruca Malen",
         "nombre": "",
@@ -164,7 +178,8 @@
         "category": "vino tinto",
         "description": "lorem ipsum",
         "image": "undefined.jpg"
-       }, {
+    },
+    {
         "id": 16,
         "bodega": "Navarro Correas",
         "nombre": "Coleccion privada",
@@ -175,7 +190,8 @@
         "category": "vino blanco",
         "description": "lorem ipsum",
         "image": "undefined.jpg"
-       }, {
+    },
+    {
         "id": 17,
         "bodega": "Trapiche",
         "nombre": "Reserva",
@@ -186,7 +202,8 @@
         "category": "vino tinto",
         "description": "lorem ipsum",
         "image": "undefined.jpg"
-       }, {
+    },
+    {
         "id": 18,
         "bodega": "Estancia Mendoza",
         "varietal": "Brut Extra",
@@ -196,5 +213,5 @@
         "category": "espumante",
         "description": "lorem ipsum",
         "image": "undefined.jpg"
-       }
-   ]
+    }
+]
