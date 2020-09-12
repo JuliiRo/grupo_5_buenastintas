@@ -48,3 +48,26 @@ El CRUD fué dividido de esta manera:
 + / agregar producto (POST) (Mili).
 +  /products/:id/edit (GET Y POST) (Nico).
 +  /products/:id/delete (POST) (Juli).
+
+## 12/09/20
+
+Durante la reunión comentamos los avances de la semana y lo que nos faltó hacer. Juli por problemas en el internet no pudo estar.
+Mili contó que avanzó en:
++ La vista de agregar productos.
++ Arregló los errores de linkeo en las barras de navegación.
++ cambió el boton desplegable del menú cuando la página esta en modo mobile.
+
+Le falta hacer/terminar:
++ Darle estilo a agregar productos.
++ La parte del POST de agregar productos.
+
+Nico pudo avanzar en:
++ Página show/:id/show
++ Corrigió el home
++ Cambió la foto de productos por una generica
+
+Le falta hacer/terminar:
++ Chequear en la base de datos que todos los productos tengan las mismas categorias
++ La pagina /show que muestre todos los productos
+
+Quedó por definir quién va a modificar la tienda para que muestre los productos reales de nuestra base de datos y si llegamos que su filtro funcione.
