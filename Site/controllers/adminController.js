@@ -4,14 +4,22 @@ const dbProducts = require('../data/dbProducts')
 
 
 module.exports = {
+    show: function(req,res){
+        let db = dbProducts
+        res.render('show', {
+            title: 'Administrador | Buenas Tintas',
+            css: 'show.css',
+            db:db,
+        })
+    },
     agregar:function(req,res){
        // http://localhost:3000/admin
         res.render('admin', { 
-            title: 'Admin | Buenas Tintas' ,
+            title: 'agregar | Buenas Tintas' ,
             css: 'admin.css'
         })
     },
-    show:function(req,res){
+    showEdit:function(req,res){
         let idProducto = req.params.id;
         let flap = req.params.flap;
         let activeDetail;
