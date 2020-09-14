@@ -71,3 +71,16 @@ Le falta hacer/terminar:
 + La pagina /show que muestre todos los productos
 
 Quedó por definir quién va a modificar la tienda para que muestre los productos reales de nuestra base de datos y si llegamos que su filtro funcione.
+
+## 14/09/20
+
+Se hizo una reunión bis de la del sábado para que Juli pueda estar al tanto de lo que charlamos.
+
+Nico Contó que pudo:
++ Armar la tienda de forma dinámica tomando los productos de la DataBase.
++ Cambio la sección de administrador y le puso un show similar al de la tienda, pero con todas las descripciones que tienen los productos.
++ Completo la base de datos de productos.
+
+Mili estuvo trabajando:
++ En el css de agregar producto.
++ Y en el POST de agregar productos.
