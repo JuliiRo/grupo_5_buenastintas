@@ -26,22 +26,28 @@
   <section class="principal">
     <div class="container">
       <div class="row">
+        <% db.forEach(producto => { %>
         <div class="col-12 col-md-6 col-lg-3">
           <div class="contenido">
             <figure>
-              <a href="/tienda/detalle">
-                <img src="/images/home/espumantes.jpg" alt="">
+              <a href="/tienda/<%= producto.id %>">
+                <img src="/images/<%= producto.image %> " alt="">
               </a>
             </figure>
+            <h3><%= producto.bodega %> </h3>
+            <span><%= producto.nombre %> </span>
             <article>
-               <h3>$1.300</h3>
-               <span>5% OFF</span>
+              $<%- (producto.price - producto.price * producto.discount / 100).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") %>
+               <% if (producto.discount !=0) { %>
+                  <span><%= producto.discount %>% OFF</span>
+                <% } %>
+                <!--
                <p>Nombre del producto</p>
               <a href="/tienda/carrito"><button type="submit"><i class="fas fa-cart-arrow-down"></i>comprar</button></a>
             </article>
           </div>
         </div>
-
+        
         <div class="col-12 col-md-6 col-lg-3">
           <div class="contenido">
             <figure>
@@ -53,12 +59,12 @@
                <h3>$1.300</h3>
                <span>20% OFF</span>
                <p>Nombre del producto</p>
-                                <!-- Buscar el icono de carrito -->
+
                <a href="/tienda/carrito"><button type="submit"><i class="fas fa-cart-arrow-down"></i>comprar</button></a>
             </article>
           </div>
         </div>
-
+ 
         <div class="col-12 col-md-6 col-lg-3">
           <div class="contenido">
             <figure>
@@ -70,7 +76,7 @@
                <h3>$1.300</h3>
                <span>10% OFF</span>
                <p>Nombre del producto</p>
-                                <!-- Buscar el icono de carrito -->
+                                
               <a href="/tienda/carrito"><button type="submit"><i class="fas fa-cart-arrow-down"></i>comprar</button></a>
             </article>
           </div>
@@ -86,7 +92,7 @@
                <h3>$1.300</h3>
                <span>50% OFF</span>
                <p>Nombre del producto</p>
-                                <!-- Buscar el icono de carrito -->
+                                
                <a href="/tienda/carrito"><button type="submit"><i class="fas fa-cart-arrow-down"></i>comprar</button></a>
             </article>
           </div>
@@ -102,7 +108,7 @@
                <h3>$1.300</h3>
                <span>5% OFF</span>
                <p>Nombre del producto</p>
-                                <!-- Buscar el icono de carrito -->
+                                
               <a href="/tienda/carrito"><button type="submit"><i class="fas fa-cart-arrow-down"></i>comprar</button></a>
             </article>
           </div>
@@ -119,7 +125,7 @@
                <h3>$1.300</h3>
                <span>10% OFF</span>
                <p>Nombre del producto</p>
-                                <!-- Buscar el icono de carrito -->
+                               
               <a href="/tienda/carrito"><button type="submit"><i class="fas fa-cart-arrow-down"></i>comprar</button></a>
             </article>
           </div>
@@ -135,7 +141,7 @@
                <h3>$1.300</h3>
                <span>50% OFF</span>
                <p>Nombre del producto</p>
-                                <!-- Buscar el icono de carrito -->
+                                
               <a href="/tienda/carrito"><button type="submit"><i class="fas fa-cart-arrow-down"></i>comprar</button></a>
             </article>
           </div>
@@ -152,13 +158,16 @@
                <h3>$1.300</h3>
                <span>20% OFF</span>
                <p>Nombre del producto</p>
-                                <!-- Buscar el icono de carrito -->
+                                
               <a href="/tienda/carrito"><button type="submit"><i class="fas fa-cart-arrow-down"></i>comprar</button></a>
             </article>
           </div>
         </div>
+      -->
       </div>
+      
     </div>
+    <% }) %>
   </section>
   
   <!--ACA VA EL FOOTER-->

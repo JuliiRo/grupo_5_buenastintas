@@ -4,9 +4,11 @@ const dbProducts = require(path.join(__dirname,'..','data','dbProducts'))
 module.exports = {
     //http://localhost:3000/tienda
     tienda:function(req,res){
+        let db = dbProducts
         res.render('tienda', { 
             title: 'Tienda | Buenas tintas',
-            css: 'tienda.css'
+            css: 'tienda.css',
+            db:db
         })
     },
     //http://localhost:3000/tienda/carrito
