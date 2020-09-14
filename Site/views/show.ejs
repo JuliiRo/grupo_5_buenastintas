@@ -9,7 +9,7 @@
         <section class="form">
             <div>
   <section class="principal">
-    <div class="container-fluid contenido">
+    <div class="container-fluid">
       <div class="row">
         <% db.forEach(producto => { %>
         <div class="col-12 col-md-6 col-lg-4">
@@ -17,19 +17,20 @@
             <figure>
               <a href="admin/show/<%= producto.id %>/show">
                 <img src="/images/<%= producto.image %> " alt="">
-              </a>
             </figure>
-            <a href="admin/show/<%= producto.id %>/show">
             <h3>Bodega: <%= producto.bodega %> </h3>
             <h4>Nombre: <%= producto.nombre %> </h4>
             <h4>Varietal: <%= producto.varietal %> </h4>
             <h4>Año: <%= producto.año %> </h4>
+            <h4>Precio: <%= producto.price %> </h4>
               <h4>Descuento: <%= producto.discount %>% OFF</h4>
               <h4>Categoría: <%= producto.category %> </h4>
+            </a>
             </div>
-        </a>
         </div>
         <% }) %>
+      </div>
+    </div>
       </section>
       
       <!--ACA VA EL FOOTER-->

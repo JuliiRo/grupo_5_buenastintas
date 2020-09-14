@@ -20,24 +20,53 @@
    
     text-transform: uppercase;
 }
- 
+/* PRODUCTOS */
 .principal .contenido{
     background-color:var(--color-grisClaro);
     border-radius: 5px;
+    padding: 5px;
     text-align: center;
-    margin-bottom: 10px;
-    padding: 10px;
+    margin-bottom: 20px;
 } 
 .contenido img{
     width: 80%;
 }
-
 p{
     color: black;
     font-size: 20px;
 }
-h4, h3{
-    color: black;
+
+/* --- AJUSTES TIENDA - VERSION PARA TABLET (768px) --- */
+@media(max-width:1024px){
+    .main-nav{
+        padding-left:4%;
+    }
+    .main-nav .algo{
+        width: 96%;
+    }
+    .main-nav li{
+        margin-left:6px;
+        padding-right:45px;
+    }
+}
+@media(max-width:768px){
+    /* MINI BARRA */
+    .main-nav .algo{
+        background-color: black;
+        height: 50%;
+        width: 90%;
+        text-align: center;
+    }
+    .main-nav li{
+        display: block;
+        padding: 10px;
+        border-right: none;
+        border-bottom: white 1px solid;
+    }
+    .main-nav li:last-child{
+        border: none;
+    }
+    
 }
 
 @media(min-width:1024px){

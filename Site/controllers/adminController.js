@@ -39,7 +39,7 @@ module.exports = {
         })
         res.render('vistaProducto',{
             title: 'Ver / Editar | BT',
-            css: 'tienda.css',
+            css: 'vistaProducto.css',
             total: dbProducts.lenght,
             producto:resultado[0],
             activeDetail: activeDetail,
