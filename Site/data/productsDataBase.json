@@ -206,6 +206,7 @@
     {
         "id": 18,
         "bodega": "Estancia Mendoza",
+        "nombre": "",
         "varietal": "Brut Extra",
         "año": 2019,
         "price": 100,
