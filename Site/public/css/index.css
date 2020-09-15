@@ -21,8 +21,7 @@
   align-items: center;
   text-align: center;
 }
-.banner{
-  
+#carouselExampleControls{
   display: none;
 }
 .contenido{
@@ -51,13 +50,19 @@ a:hover{
   color: var(--color-violeta);
 }
 
-@media (min-width:1300px){
-  .banner{
+@media (min-width:1024px){
+  #carouselExampleControls{
     display: inline-flex;
     width: 100%;
-    margin-left: 130px;
+    height: 250px;
+
   }
   .contenido {
     margin-left: 70px;
+  }
+}
+@media (min-width:1440px){
+  #carouselExampleControls{
+    height: 355px;
   }
 }
