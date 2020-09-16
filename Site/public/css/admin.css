@@ -42,11 +42,13 @@ textarea{
     color:white;
     border: white 1px solid;
     border-radius: 4px;
-    margin: 15px;
-    padding:5px 30px ;
-    margin-left: 18%;
+    margin: 5px;
+    margin-left: 20%;
+    padding: 7px 15px;
 }
-
+.form button:last-child{
+    margin-left: 0px;
+}
 @media(min-width:768px) {
     /* MINI BARRA */
     .mini-barra{
@@ -76,7 +78,8 @@ textarea{
         margin-left: 14%;
     }
     .form button{
-        margin-left: 35%;
+        margin-left: 30%;
+        padding: 7px 20px;
     }
 }
 @media(min-width:1024px) {
@@ -131,7 +134,6 @@ textarea{
         font-size: 40px;
     }
     .form button{
-        margin-left: 30%;
         font-size: 25px;
         height:55px;
     }  

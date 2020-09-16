@@ -66,3 +66,8 @@ a:hover{
     height: 355px;
   }
 }
+@media (min-width:1700px){
+  #carouselExampleControls{
+    height: 475px;
+  }
+}
