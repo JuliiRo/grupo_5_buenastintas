@@ -9,55 +9,57 @@
             <li class="opciones"><a href="/admin/show/1/show">Editar - Eliminar</a></li>
             </ul>
         </section>
+        <form action="/admin/agregar" method="POST">
+            <section class="form">
+                <div class="grupo-form">
+                    <h3><label for="">Bodega:</label></h3>
+                    <input type="text" name="bodega" placeholder="Escribí acá" required >
+                </div>
+                <div class="grupo-form">
+                    <h3><label for="">Nombre:</label></h3>
+                    <input type="text" name="nombre" placeholder="Escribí acá" required >
+                </div>
+                <div class="grupo-form">
+                    <h3><label for="">Varietal:</label></h3>
+                    <input type="text"  name="varietal" placeholder="Escribí acá" required >
+                </div>
+                <div class="grupo-form">
+                    <h3><label for="">Año:</label></h3>
+                    <input type="number" id="barra"  name="año" placeholder="Escribí acá" required>
+                </div>
+                <div class="grupo-form">
+                    <h3><label for="">Precio:</label></h3>
+                    <input type="number"  name="price" placeholder="Escribí acá" required >
+                </div>
+                <div class="grupo-form">
+                    <h3><label for="">Descuento</label></h3>
+                    <input type="number"  name="discount" placeholder="Escribí acá" >
+                </div>
+                <div class="grupo-form">
+                    <h3><label for="">Categoria:</label></h3>
+                    <select name="category" id="algo" required>
+                        <option value="">Vinos</option>
+                        <option value="espumante">Espumantes</option>
+                        <option value="whisky">Whiskies</option>
+                        <option value="aperitivo">Aperitivos</option>
+                        <option value="cerveza">Cervezas</option>
+                    </select>
+                </div>
+                <div class="grupo-form">
+                    <h3>Descripción:</h3>
+                    <textarea name="description" placeholder="Escribí acá" id="" cols="30" rows="5"></textarea>
+                  </div>
+                
+                <div class="grupo-form">
+                    <h3><label for="">Agregar imagen</label></h3>
+                    <input type="file" name="image" required>
+                </div>
+                <div>
+                    <button type="submit" class="btn btn-outline-secondary mr-3" id="agregar">Agregar Producto</button>
+                </div>
+            </section>
+        </form>
         
-        <section class="form">
-            <div class="grupo-form">
-                <h3><label for="">Bodega:</label></h3>
-                <input type="text" placeholder="Escribí acá" required >
-            </div>
-            <div class="grupo-form">
-                <h3><label for="">Nombre:</label></h3>
-                <input type="text" placeholder="Escribí acá" required >
-            </div>
-            <div class="grupo-form">
-                <h3><label for="">Varietal:</label></h3>
-                <input type="text" placeholder="Escribí acá" required >
-            </div>
-            <div class="grupo-form">
-                <h3><label for="">Año:</label></h3>
-                <input type="date" id="barra" placeholder="Escribí acá" required>
-            </div>
-            <div class="grupo-form">
-                <h3><label for="">Precio:</label></h3>
-                <input type="number" placeholder="Escribí acá" required >
-            </div>
-            <div class="grupo-form">
-                <h3><label for="">Descuento</label></h3>
-                <input type="number" placeholder="Escribí acá" >
-            </div>
-            <div class="grupo-form">
-                <h3><label for="">Categoria:</label></h3>
-                <select name="categorias" id="algo">
-                    <option value="">Vinos</option>
-                    <option value="">Espumantes</option>
-                    <option value="">Whiskies</option>
-                    <option value="">Aperitivos</option>
-                    <option value="">Cervezas</option>
-                </select>
-            </div>
-            <div class="grupo-form">
-                <h3>Descripción:</h3>
-                <textarea name="" id="descripcion" cols="30" rows="5">Escribí acá</textarea>
-              </div>
-            
-            <div class="grupo-form">
-                <h3><label for="">Agregar imagen</label></h3>
-                <input type="file" required>
-            </div>
-            <div>
-                <button type="submit" id="agregar">Agregar Producto</button>
-            </div>
-        </section>
     </div>
 </div>
 <%- include('partials/footer') %>

@@ -6,6 +6,8 @@ var router = express.Router();
 router.get('/', adminController.show)
 /* GET agregar. */
 router.get('/agregar', adminController.agregar)
+/* POST agregar. */
+router.post('/agregar', adminController.agregarProducto)
 /* Ver / Editar */
 router.get('/show/:id/:flap?',adminController.showEdit);
 /* Editar producto */

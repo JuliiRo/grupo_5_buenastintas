@@ -13,11 +13,36 @@ module.exports = {
         })
     },
     agregar:function(req,res){
+        
        // http://localhost:3000/admin
         res.render('admin', { 
-            title: 'agregar | Buenas Tintas' ,
+            title: 'Agregar | Buenas Tintas' ,
             css: 'admin.css'
         })
+    },
+    agregarProducto:function(req,res){
+        let nuevoID = 1;
+        dbProducts.forEach(producto=>{
+           if(producto.id > nuevoID){
+               nuevoID = producto.id
+           }
+        })
+        let productoNuevo={
+            id:nuevoID +1,
+            bodega: req.body.bodega.trim(),
+            nombre: req.body.nombre.trim(),
+            varietal: req.body.varietal.trim(),
+            año: Number(req.body.año),
+            price:Number(req.body.price),
+            discount: Number(req.body.discount),
+            category: req.body.category.trim(),
+            description: req.body.description.trim(),
+            image: "undefined.jpg",
+        }
+        ultimoID=productoNuevo.id
+        dbProducts.push(productoNuevo);
+        fs.writeFileSync(path.join(__dirname,"..","data","productsDataBase.json"),JSON.stringify(dbProducts),'utf-8')
+        res.redirect('/admin/show/'+ ultimoID +'/show')
     },
     showEdit:function(req,res){
         let idProducto = req.params.id;
