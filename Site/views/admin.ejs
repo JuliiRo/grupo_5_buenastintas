@@ -1,20 +1,42 @@
 <%- include('partials/head') %> 
-    <main class="principal">
-        <header>
-            <a href="/"><img src="/images/logo/logo1.png" alt=""></a>
-            <!-- Buscar el icono de la cruz -->
-            <a href="/"><i class="fas fa-times"></i></a>
-        </header>
-        <section class="opciones"></section>
-        <h2 class="opcion">Agregar Producto</h2>
-        <a href="/admin/show/1/show"><h2 class="opcion">Editar / Eliminar</h2></a>
+<%- include('partials/header') %>
+<div class="container-flud">
+    <div class="container">
+        <section class="contenido">
+            <section class="row"></section>
+            <ul class="mini-barra">
+            <li class="opciones"><a href="/admin/agregar">Agregar Producto</a></li>
+            <li class="opciones"><a href="/admin/show/1/show">Editar - Eliminar</a></li>
+            </ul>
+        </section>
+        
         <section class="form">
-            <div>
-                <h3><label for="">¿Nombre de la bebida?</label></h3>
-                <input type="text" placeholder="Escribir acá" required >
+            <div class="grupo-form">
+                <h3><label for="">Bodega:</label></h3>
+                <input type="text" placeholder="Escribí acá" required >
             </div>
-            <div>
-                <h3>Selecciona la categoria</h3>
+            <div class="grupo-form">
+                <h3><label for="">Nombre:</label></h3>
+                <input type="text" placeholder="Escribí acá" required >
+            </div>
+            <div class="grupo-form">
+                <h3><label for="">Varietal:</label></h3>
+                <input type="text" placeholder="Escribí acá" required >
+            </div>
+            <div class="grupo-form">
+                <h3><label for="">Año:</label></h3>
+                <input type="date" id="barra" placeholder="Escribí acá" required>
+            </div>
+            <div class="grupo-form">
+                <h3><label for="">Precio:</label></h3>
+                <input type="number" placeholder="Escribí acá" required >
+            </div>
+            <div class="grupo-form">
+                <h3><label for="">Descuento</label></h3>
+                <input type="number" placeholder="Escribí acá" >
+            </div>
+            <div class="grupo-form">
+                <h3><label for="">Categoria:</label></h3>
                 <select name="categorias" id="algo">
                     <option value="">Vinos</option>
                     <option value="">Espumantes</option>
@@ -23,21 +45,19 @@
                     <option value="">Cervezas</option>
                 </select>
             </div>
-            <div>
-                <h3><label for="">Descuento(opcional)</label></h3>
-                <input type="text" placeholder="Escribir acá">
+            <div class="grupo-form">
+                <h3>Descripción:</h3>
+                <textarea name="" id="descripcion" cols="30" rows="5">Escribí acá</textarea>
+              </div>
+            
+            <div class="grupo-form">
+                <h3><label for="">Agregar imagen</label></h3>
+                <input type="file" required>
             </div>
             <div>
-                <h3><label for="">¿Descuento hasta cuando?(opcional)</label></h3>
-                <input type="date" id="barra" placeholder="" required>
-            </div>
-            <div>
-                <input type="file" placeholder="agregar foto" required>
-            </div>
-            <div>
-                <button type="submit" id="agregar">Agregar </button>
+                <button type="submit" id="agregar">Agregar Producto</button>
             </div>
         </section>
-    </main>
-</body>
-</html>
+    </div>
+</div>
+<%- include('partials/footer') %>
