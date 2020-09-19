@@ -39,7 +39,7 @@
             <article>
               $<%- (producto.price - producto.price * producto.discount / 100).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") %>
                <% if (producto.discount !=0) { %>
-                  <span><%= producto.discount %>% OFF</span>
+                  <span class="descuento"><%= producto.discount %>% OFF</span>
                 <% } %>
       </div>
       

@@ -37,6 +37,9 @@
 .contenido img{
     width: 80%;
 }
+.principal .contenido .descuento{
+    background-color: #ff3c3c;
+}
 p{
     color: black;
     font-size: 20px;

@@ -13,8 +13,6 @@ module.exports = {
         })
     },
     agregar:function(req,res){
-        
-       // http://localhost:3000/admin
         res.render('admin', { 
             title: 'Agregar | Buenas Tintas' ,
             css: 'admin.css'
