@@ -6,5 +6,5 @@ const tiendaController = require('../controllers/tiendaController')
 router.get('/', tiendaController.tienda);
 router.get('/carrito', tiendaController.carrito)
 router.get('/:id', tiendaController.detalle)
- 
+
 module.exports = router

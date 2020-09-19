@@ -84,3 +84,15 @@ Nico Contó que pudo:
 Mili estuvo trabajando:
 + En el css de agregar producto.
 + Y en el POST de agregar productos.
+
+## 19/09/20
+
+Durante esta reunión charlamos como de como llegamos a la presentación del sprint el lunes.
+
+Mili terminó el css y la ruta post de agregar productos.
+
+Nico ya había terminado con las actividades que le correspondían
+
+Juli terminó la ruta delete con su correspondiente botón y está trabajando en la sub-barra de navegación de la tienda.
+
+Si el lunes nos dan el próximo Sprint el martes 22/09 antes de la clase nos juntamos para analizarlo.
