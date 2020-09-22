@@ -10,11 +10,9 @@
     font-size: 20px;
 }
 
-.form .images{
+.images{
     padding-top: 10px;
-    width: 100%;
     display: flex;
-    flex-wrap: wrap;
     justify-content: center;
 }
 h1{
@@ -22,38 +20,40 @@ h1{
     font-weight: bold;
     text-align: center;
     text-transform: uppercase;
-    margin: 20px 0;
-
+    margin-top: 10px;
 }
 .grupo-form label, .grupo-form input{
-    display: block; 
-    margin-bottom: 10px;
-    margin-left: 30px;
+    display: block;  
+    margin: 5px 10px;
 }
 .grupo-form input{
     border: black solid 1px;
     border-radius: 4px;
+    width: 90%;
 }
-.grupo-form2{
-    padding: 15px;
-    margin-top: 10px;
+.terminos-condiciones{
+    margin: 10px 35px;
 }
 #contra{
     padding-left:60px;
     margin-top: 20px;
 }
+#boton-recordar{
+    margin-left: 27%;
+    font-weight: bold;
+    cursor: pointer;
+}
+
 .form button{
     background-color:black;
     color:white;
     border: white 1px solid;
     border-radius: 4px;
-    margin-top: 2px;
     padding:2px 25px ;
     margin-left: 55px;
 }
 .button-algo{
-    margin-left: 40px;
-    margin-top: 20px;
+    margin-left: 30px;
 } 
 .form2{
     border-top: black solid 1px;
@@ -62,10 +62,7 @@ h1{
     margin-bottom: 15px;
 }
 #registrarse{
-    padding-left: 50px;
-}
-#iniciarsesion{
-    padding-left: 15px;
+    padding-left: 15%;
 }
 /* --- AJUSTES VERSION PARA TABLET (768px) --- */
 
@@ -76,14 +73,35 @@ h1{
         margin-top: 10px;
         margin-bottom: 10px;
     }
+    .grupo-form label, .grupo-form input{
+        margin: 5px 25px;
+    }
+    .terminos-condiciones{
+        margin-left: 20%;
+    }
+    .button-algo{
+        margin-left: 50px;
+    } 
+    #contra{
+        margin-left: 5%;
+    }
+    #registrarse{
+        padding-left: 70px;
+    }
+    #boton{
+        margin-left: 70px;
+    }
 }
 
 
 /* --- AJUSTES VERSION PARA ESCRITORIO (1024px) --- */
 
 @media(min-width:1024px){
-       /* Formulario */
-       .form{
+    /* Formulario */
+    .form{
         width: 40%;
+    }
+    #registrarse{
+        padding-left: 80px;
     }
 }
