@@ -96,3 +96,13 @@ Nico ya había terminado con las actividades que le correspondían
 Juli terminó la ruta delete con su correspondiente botón y está trabajando en la sub-barra de navegación de la tienda.
 
 Si el lunes nos dan el próximo Sprint el martes 22/09 antes de la clase nos juntamos para analizarlo.
+
+## 23/09/2
+
+Durante la reunión del día de la fecha, charlamos respecto al nuevo sprint. Nos dividimos las consignas de la siguiente manera:
+
++ Mili venía trabajando el login, por lo cual va aplicarle el multer para la imagen y el encriptado de contraseña (Punto 5) e implementar el recordar la sesión (Punto 7).
++ Juli va a hacer la verificación de la información enviada por el usuario.
++ Nico va a trabajar el punto 8, si el usuario NO está logeado, va poder navegar por el home y por la tienda; si es usuario standard, va a poder acceder al carrito; si es administrador será redirigido al admin.
+
+Por último, Juli no pudo terminar de hacer funcionar el agregar productos, en estos días lo termina de solucionar.
