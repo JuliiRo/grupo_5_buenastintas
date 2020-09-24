@@ -5,6 +5,7 @@
         <ul class="barra">
         <li class="opciones"><a href="/admin/agregar">Agregar Producto</a></li>
         <li class="opciones"><a href="/admin/show/1/show">Editar / Eliminar</a></li>
+    
         </ul>
         <section class="form">
             <div>
@@ -25,7 +26,13 @@
             <h4>Precio: <%= producto.price %> </h4>
               <h4>Descuento: <%= producto.discount %>% OFF</h4>
               <h4>Categoría: <%= producto.category %> </h4>
+             
+              <form action ="/admin/eliminar/<%= producto.id %>?_method=DELETE" method="POST">
+                <button type="submit">Eliminar</button>
+             </form>
+            
             </a>
+           
             </div>
         </div>
         <% }) %>

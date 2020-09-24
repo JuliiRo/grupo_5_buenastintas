@@ -13,6 +13,6 @@ router.get('/show/:id/:flap?',adminController.showEdit);
 /* Editar producto */
 router.put('/edit/:id', adminController.editar)
 /* Eliminar producto */
-router.delete('/delete/:id', adminController.eliminar)
+router.delete('/eliminar/:id', adminController.delete)
 
 module.exports = router;

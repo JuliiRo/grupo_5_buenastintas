@@ -80,6 +80,10 @@
                                         <span><b>Descuento:</b> 
                                         <%=producto.discount%>%
                                     </span>
+
+                                    <form action ="/admin/eliminar/<%= producto.id %>?_method=DELETE" method="POST">
+                                        <button type="submit">Eliminar</button>
+                                     </form>
                                     </div>
 
                                 </div>
