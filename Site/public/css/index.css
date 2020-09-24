@@ -37,7 +37,8 @@
 }
 .contenido a {
   text-decoration: none;
-  color: black
+  color: black;
+  font-size: 1rem;
 }
 a:hover{
   color: var(--color-naranja-claro);
@@ -65,9 +66,15 @@ a:hover{
   #carouselExampleControls{
     height: 355px;
   }
+  .contenido p{
+    font-size: 1.25rem;
+    }
 }
 @media (min-width:1700px){
   #carouselExampleControls{
     height: 475px;
+  }
+  .contenido p{
+  font-size: 1.5rem;
   }
 }
