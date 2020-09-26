@@ -97,7 +97,7 @@ Juli terminó la ruta delete con su correspondiente botón y está trabajando en
 
 Si el lunes nos dan el próximo Sprint el martes 22/09 antes de la clase nos juntamos para analizarlo.
 
-## 23/09/2
+## 23/09/20
 
 Durante la reunión del día de la fecha, charlamos respecto al nuevo sprint. Nos dividimos las consignas de la siguiente manera:
 
@@ -106,3 +106,14 @@ Durante la reunión del día de la fecha, charlamos respecto al nuevo sprint. No
 + Nico va a trabajar el punto 8, si el usuario NO está logeado, va poder navegar por el home y por la tienda; si es usuario standard, va a poder acceder al carrito; si es administrador será redirigido al admin.
 
 Por último, Juli no pudo terminar de hacer funcionar el agregar productos, en estos días lo termina de solucionar.
+
+
+## 26/09/20
+
+En esta reunión estuvimos charlando un poco más respecto de este sprint ya que no estaban tan claras las cosas a hacer.
+
+Juli pudo terminar el agregar productos y ya fue avisado a los profes.
+
+Mili está sin computadora, por lo cual definimos que si para el miércoles no lo pudo resolver, hará un intercambio de tareas con Nico, ya que el punto 8 se aplica una vez que el resto de los puntos del sprint están terminados.
+
+Aprovechamos la reunión para realizar la retrospectiva del sprint anterior.
