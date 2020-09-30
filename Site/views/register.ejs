@@ -3,21 +3,21 @@
 
     <section class="formario">
         <section class="form">
-            <form action="">
+            <form action="/users/register" method="POST" enctype="multipart/form-data">
                 <h1>Regístrate</h1>
                 <div class="grupo-form" >
                     <label for="">Nombre completo:</label>
-                    <input type="text" id="barra" placeholder="Ingresá tu nombre completo" required>
+                    <input type="text" id="barra" name="nombreCompleto" placeholder="Ingresá tu nombre completo" required>
                 </div>
 
                 <div class="grupo-form" >
                     <label for="">Email:</label>
-                    <input type="email" id="barra" placeholder="Ingresá tu email" required>
+                    <input type="email" id="barra" name="correo" placeholder="Ingresá tu email" required>
                 </div>
 
                 <div class="grupo-form" >
                     <label for="">Fecha de nacimiento:</label>
-                    <input type="date" id="barra" placeholder="Fecha ne nacimiento" required>
+                    <input type="date" id="barra" name="nacimiento" placeholder="Fecha ne nacimiento" required>
                 </div>
 
                 <div class="grupo-form">
@@ -27,12 +27,12 @@
 
                 <div class="grupo-form">
                     <label for="">Teléfono:</label>
-                    <input type="tel" id="barra" placeholder="Ingresá tu teléfono" required>
+                    <input type="tel" id="barra" name="telefono" placeholder="Ingresá tu teléfono" required>
                 </div>
 
                 <div class="grupo-form" >
                     <label for="">Contraseña:</label>
-                    <input type="password" id="barra" placeholder="Ingresá tu contraseña" required>
+                    <input type="password" id="barra" name="contraseña" placeholder="Ingresá tu contraseña" required>
                 </div>
 
 
