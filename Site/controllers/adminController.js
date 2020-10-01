@@ -35,7 +35,7 @@ module.exports = {
             discount: Number(req.body.discount),
             category: req.body.category.trim(),
             description: req.body.description.trim(),
-            image: "undefined.jpg",
+            image: (req.files[0])?req.files[0].filename: "undefined.jpg",
         }
         ultimoID=productoNuevo.id
         dbProducts.push(productoNuevo);
@@ -84,7 +84,7 @@ module.exports = {
                 producto.discount = Number(req.body.discount),
                 producto.category = req.body.category,
                 producto.description = req.body.description,
-                producto.image = producto.image
+                producto.image = (req.files[0])?req.files[0].filename: "undefined.jpg"
             }
         })
         fs.writeFileSync(path.join(__dirname,'../data/productsDataBase.json'),JSON.stringify(dbProducts),'utf-8');
