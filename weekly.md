@@ -117,3 +117,9 @@ Juli pudo terminar el agregar productos y ya fue avisado a los profes.
 Mili está sin computadora, por lo cual definimos que si para el miércoles no lo pudo resolver, hará un intercambio de tareas con Nico, ya que el punto 8 se aplica una vez que el resto de los puntos del sprint están terminados.
 
 Aprovechamos la reunión para realizar la retrospectiva del sprint anterior.
+
+## 01/10/20
+
++ Mili terminó sus tareas.
++ Juli esta terminando de resolver lo suyo
++ Nico está esperando que Juli termine para poder empezar lo suyo
