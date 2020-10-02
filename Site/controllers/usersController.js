@@ -4,6 +4,7 @@ const fs = require('fs');
 
 const dbUsers = require(path.join(__dirname,'..','data','dbUsers'))
 const bcrypt = require('bcrypt');
+const {validationResult} = require('express-validator')
 
 module.exports = {
      // http://localhost:3000/users/
@@ -19,6 +20,34 @@ module.exports = {
             title: 'Registro | Buenas Tintas',
             css: 'users.css'
         })
+    },
+    processLogin:function(req,res){
+        //res.send(req.body)
+
+        let errores = validationResult(req); //guardo los errores que me vienen de expressValidator
+
+        if(errores.isEmpty()){ //si no hay errores
+            
+        dbUsers.forEach(user => {
+                if(user.email == req.body.email && bcrypt.compareSync(req.body.password, user.password)){
+                    req.session.user = {
+                        nombre: user.user,
+                        email: user.email,
+                        id:user.id
+                    }
+
+                    return res.redirect('/users')
+                } 
+
+            })
+
+        }else{
+            res.render('users',{
+                title: 'Login | Buenas Tintas',
+                css: 'users.css',
+                errores: errores.mapped()
+            })
+        }
     },
     agregarRegister: (req,res)=>{
         let idNuevo = 1;
@@ -39,6 +68,6 @@ module.exports = {
         }
         dbUsers.push(nuevoUsers);
         fs.writeFileSync(path.join(__dirname,"..","data","usersDataBase.json"),JSON.stringify(dbUsers),'utf-8')
-        res.redirect('/users')
+        res.redirect('/users/login')
     }
 }
