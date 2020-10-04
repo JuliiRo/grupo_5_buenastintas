@@ -69,3 +69,11 @@ Los colores que usaremos serán:
 
 + Bodini flf
 + DM sans
+
+## Entrar a Administrar
+
+Para entrar a Administrar ingresar en login y loguearse con admin@buenastintas.com pass:123456
+
+## Entrar al carrito
+
+Para entrar al carrito deberás estar logueado. Usuario nico@caputo.com pass:123456
