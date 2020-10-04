@@ -62,11 +62,17 @@
 
         <!--barra de menu: login y registro-->
         <ul class="usuario navbar-nav">
-          <li>
+          <% if (typeof user != 'undefined') { %>
+          <li><%= user.nombre%> </li> 
+          <!--  <li><a href="/user/logout"></a>Cerrar Sesion</li> -->
+          <% }else {%>
+          
             <li><a href="/users/register">Registro</a></li>
           </li>
-          <li><a href="/users/login">Iniciar Sesion</a></li>
+        <li><a href="/users/login">Iniciar Sesion</a></li>
             <li><a href="/admin">Administrar</a></li>
+            <% } %>
+
         </ul>
       </div>
       <!--finaliza caja contenedora del menu-->
