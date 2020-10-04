@@ -8,7 +8,7 @@ module.exports = {
         res.render('tienda', { 
             title: 'Tienda | Buenas tintas',
             css: 'tienda.css',
-            db:db
+            productos:db
         })
     },
     //http://localhost:3000/tienda/carrito
@@ -18,16 +18,31 @@ module.exports = {
             css: 'carrito.css',
         })
     },
+    search:function(req,res){
+        let busqueda= req.query.search;
+        let productos=[];
+        dbProducts.forEach(producto => {
+            if(producto.bodega.toLowerCase().includes(busqueda.toLowerCase())){
+                productos.push(producto)
+            }
+        });
+        res.render('tienda',{
+            title: 'Buscador | Buenas tintas',
+            css: 'tienda.css',
+            productos:productos
+        })
+    },
         //http://localhost:3000/tienda/detalle
     detalle:function(req,res){
         idBebida = req.params.id;
-        let producto = dbProducts.filter(producto=>{
+        let productos = dbProducts.filter(producto=>{
             return producto.id == idBebida
         })
         res.render('detalleProducto', {
             title: 'Detalle de Producto | Buenas tintas',
             css: 'detalleProducto.css',
-            producto:producto[0],
+            producto:productos[0],
         })
-    },
+    }
+    
 }
