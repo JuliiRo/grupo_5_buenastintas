@@ -12,12 +12,11 @@
 
       <!--caja que contiene el formulario-->
       <div class="col-7 col-md-6 ">
-        <form action="/tienda/search" method="GET">
+        <form action="/products/search" method="GET">
           <input
             type="text"
             name="search"
             placeholder="Buscar productos"
-            class="search-form_input"
           />
           <button type="submit">
             <i class="fas fa-search"></i>
@@ -63,16 +62,22 @@
 
         <!--barra de menu: login y registro-->
         <ul class="usuario navbar-nav">
+
           <% if (typeof user != 'undefined') { %>
-          <li><%= user.nombre%> </li> 
-          <!--  <li><a href="/user/logout"></a>Cerrar Sesion</li> -->
-          <% }else {%>
-          
-            <li><a href="/users/register">Registro</a></li>
+          <li><%- user.nombre %></li>
+      
+          <li>
+              <a href="/users/logout">Cerrar sesión <i class="fas fa-sign-in-alt"></i></a>
           </li>
-        <li><a href="/users/login">Iniciar Sesion</a></li>
-            <li><a href="/admin">Administrar</a></li>
-            <% } %>
+              <% if (user.categoría == 'administrador') { %>
+              <li><a href="/admin">Administrar</a></li>
+              <% } %>
+      
+          <% } else {%>
+          <li><a href="/users/register">Registro</a></li>
+          <li><a href="/users/login">Iniciar sesión</a></li>
+          <% } %>
+      </ul>
 
         </ul>
       </div>

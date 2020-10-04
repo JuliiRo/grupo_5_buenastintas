@@ -2,7 +2,7 @@
     <%- include('partials/header2') %>
     <section class="formulario">
         <section class="form">
-            <form action=""  method="POST">
+            <form action="/users/login"  method="POST">
                 <div class="images">
                     <img src="/images/login/pngwing.svg" alt="">
                 </div>
@@ -15,9 +15,9 @@
                 </div>
                 <div class="grupo-form">
                     <label for="">Contraseña:</label>
-                    <input type="password" id="barra" placeholder="Ingresá tu contraseña" name="pass"> 
+                    <input type="password" id="barra" placeholder="Ingresá tu contraseña" name="password"> 
                     <span class="text-danger"><%= (typeof errores != 'undefined' && errores.pass) ? errores.pass.msg : "" %> </span>
- 
+
                 </div>
                 <div class="form-group form-check" id="boton-recordar">
                     <input type="checkbox" class="form-check-input" id="exampleCheck1" name="recordar">

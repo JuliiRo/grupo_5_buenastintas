@@ -138,5 +138,25 @@
         "image": "undefined.jpg",
         "telefono": "160-552-0438",
         "contraseña": "UjFjgxJ3WX6N"
+    },
+    {
+        "id": 15,
+        "categoría": "administrador",
+        "nombreCompleto": "Administrador",
+        "correo": "admin@buenastintas.com",
+        "nacimiento": "1995-05-20",
+        "image": "image-1601663654317.png",
+        "telefono": 1153796531,
+        "contraseña": "$2b$10$5MJIG9A8zSdBeUoPCgzF3.kKkIdpZzR/DttxcH3d1SdFzBHUYXHJ2"
+    },
+    {
+        "id": 16,
+        "categoría": "usuario",
+        "nombreCompleto": "Nicolas Caputo",
+        "correo": "nico@caputo.com",
+        "nacimiento": "1995-05-20",
+        "image": "foto-undefined.png",
+        "telefono": 1153796531,
+        "contraseña": "$2b$10$M.EbxG/shhvISFdCl0UEVe4YcRe/OhRpMAaBHRDqOvm8bOmn7oXUy"
     }
 ]

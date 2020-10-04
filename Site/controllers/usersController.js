@@ -22,32 +22,34 @@ module.exports = {
         })
     },
     processLogin:function(req,res){
-        //res.send(req.body)
-
+        
         let errores = validationResult(req); //guardo los errores que me vienen de expressValidator
-
         if(errores.isEmpty()){ //si no hay errores
-            
         dbUsers.forEach(user => {
-                if(user.email == req.body.email && bcrypt.compareSync(req.body.password, user.password)){
-                    req.session.user = {
-                        nombre: user.user,
-                        email: user.email,
-                        id:user.id
-                    }
+            if(user.correo == req.body.email && bcrypt.compareSync(req.body.password, user.contraseña)){
+                req.session.user = {
+                    nombre: user.nombreCompleto,
+                    categoría: user.categoría,
+                    email: user.correo,
+                    id:user.id
+                }
+                return res.redirect('/')
+            } 
 
-                    return res.redirect('/users')
-                } 
-
-            })
-
+        })
         }else{
             res.render('users',{
                 title: 'Login | Buenas Tintas',
                 css: 'users.css',
-                errores: errores.mapped()
+                errores: errores.mapped(),
+                old:req.body
             })
         }
+    },
+    logout: function(req,res){
+        req.session.destroy()
+        
+        return res.redirect('/')
     },
     agregarRegister: (req,res)=>{
         let idNuevo = 1;
@@ -69,5 +71,7 @@ module.exports = {
         dbUsers.push(nuevoUsers);
         fs.writeFileSync(path.join(__dirname,"..","data","usersDataBase.json"),JSON.stringify(dbUsers),'utf-8')
         res.redirect('/users/login')
-    }
+    },
+
+
 }
