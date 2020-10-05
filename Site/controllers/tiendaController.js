@@ -22,7 +22,7 @@ module.exports = {
         let busqueda= req.query.search;
         let productos=[];
         dbProducts.forEach(producto => {
-            if(producto.bodega.toLowerCase().includes(busqueda.toLowerCase())){
+            if(producto.bodega.toLowerCase().includes(busqueda.toLowerCase()) || producto.nombre.toLowerCase().includes(busqueda.toLowerCase())){
                 productos.push(producto)
             }
         });
