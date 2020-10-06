@@ -158,5 +158,15 @@
         "image": "foto-undefined.png",
         "telefono": 1153796531,
         "contraseña": "$2b$10$M.EbxG/shhvISFdCl0UEVe4YcRe/OhRpMAaBHRDqOvm8bOmn7oXUy"
+    },
+    {
+        "id": 17,
+        "categoría": "usuario",
+        "nombreCompleto": "Milagros Gaundri",
+        "correo": "miligaundri10@gmail.com",
+        "nacimiento": "2002-03-31",
+        "image": "foto-undefined.png",
+        "telefono": 1172451257,
+        "contraseña": "$2b$10$Xq3K2ltamrSnqXGQ5iPIMuhEP52u3QR6HKuauTPk9uwuhakk5v4JO"
     }
 ]

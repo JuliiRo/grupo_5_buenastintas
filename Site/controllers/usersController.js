@@ -33,10 +33,15 @@ module.exports = {
                     email: user.correo,
                     id:user.id
                 }
-                return res.redirect('/')
+                
             } 
-
-        })
+        })            
+        if(req.body.recordar){
+            res.cookie('userBuenasTintas' ,req.session.user,{maxAge:1000*60*60})
+        }
+        res.locals.user = req.session.user
+        console.log(res.locals.user)
+        res.redirect('/')
         }else{
             res.render('users',{
                 title: 'Login | Buenas Tintas',
@@ -45,6 +50,7 @@ module.exports = {
                 old:req.body
             })
         }
+        
     },
     logout: function(req,res){
         req.session.destroy()
