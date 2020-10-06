@@ -39,8 +39,8 @@ module.exports = {
         if(req.body.recordar){
             res.cookie('userBuenasTintas' ,req.session.user,{maxAge:1000*60*60})
         }
-        res.locals.user = req.session.user
-        console.log(res.locals.user)
+        //res.locals.user = req.session.user
+        //console.log(res.locals.user)
         res.redirect('/')
         }else{
             res.render('users',{
@@ -54,7 +54,9 @@ module.exports = {
     },
     logout: function(req,res){
         req.session.destroy()
-        
+        if(req.cookies.userBuenasTintas){
+            res.cookie('userBuenasTintas',' ',{maxAge:-1});
+        }
         return res.redirect('/')
     },
     agregarRegister: (req,res)=>{

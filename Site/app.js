@@ -6,6 +6,7 @@ var logger = require('morgan');
 const methodOverride = require('method-override');
 const session = require('express-session');
 const localsUserCheck = require('./middlewares/localUserCheck');
+const loginCookie = require('./middlewares/loginCookieMiddlewares')
 var indexRouter = require('./routes/index');
 var usersRouter = require('./routes/users');
 let tiendaRouter = require('./routes/tienda')
@@ -24,6 +25,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 app.use(methodOverride('_method'));
 app.use(session({secret: "buenasTintas"}));
+app.use(loginCookie)
 app.use(localsUserCheck)
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
