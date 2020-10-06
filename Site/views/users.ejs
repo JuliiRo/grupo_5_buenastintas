@@ -10,13 +10,13 @@
                 <div class="grupo-form">
                     <label for="">Email:</label>
                     <input type="email" id="barra" placeholder="Ingresá tu email" name="email">
-                    <span class="text-danger"><%= (typeof errores != 'undefined' && errores.pass) ? errores.pass.msg : "" %> </span>
+                    <span class="text-danger"><%= (typeof errores != 'undefined' && errores.email) ? errores.email.msg : "" %> </span>
 
                 </div>
                 <div class="grupo-form">
                     <label for="">Contraseña:</label>
                     <input type="password" id="barra" placeholder="Ingresá tu contraseña" name="password"> 
-                    <span class="text-danger"><%= (typeof errores != 'undefined' && errores.pass) ? errores.pass.msg : "" %> </span>
+                    <span class="text-danger"><%= (typeof errores != 'undefined' && errores.password) ? errores.password.msg : "" %> </span>
 
                 </div>
                 <div class="form-group form-check" id="boton-recordar">
