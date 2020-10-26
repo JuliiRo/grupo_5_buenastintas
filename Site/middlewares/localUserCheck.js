@@ -1,6 +1,10 @@
-module.exports = function localsUserCheck(req,res,next){
-    if(req.session.user){
-        res.locals.user = req.session.user
-    }
+module.exports = function(req,res,next){
+    if(req.cookies.userBuenasTintas){
+        console.log(req.cookies.userBuenasTintas)
+        req.session.user = req.cookies.userBuenasTintas;
+        res.locals.user = req.session.user  
         next()
+    }else{
+        next()
+    }
 }

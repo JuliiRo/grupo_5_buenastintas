@@ -25,23 +25,20 @@ module.exports = {
         
         let errores = validationResult(req); //guardo los errores que me vienen de expressValidator
         if(errores.isEmpty()){ //si no hay errores
-        dbUsers.forEach(user => {
-            if(user.correo == req.body.email && bcrypt.compareSync(req.body.password, user.contraseña)){
-                req.session.user = {
-                    nombre: user.nombreCompleto,
-                    categoría: user.categoría,
-                    email: user.correo,
-                    id:user.id
-                }
-                
+            dbUsers.forEach(user => {
+                if(user.correo == req.body.email && bcrypt.compareSync(req.body.password, user.contraseña)){
+                    req.session.user = {
+                        nombre: user.nombreCompleto,
+                        categoría: user.categoría,
+                        email: user.correo,
+                        id:user.id
+                    }
+                } 
+            }) 
+            if(req.body.recordar){
+                res.cookie('userBuenasTintas' ,req.session.user,{maxAge:1000*60*60})
             } 
-        })            
-        if(req.body.recordar){
-            res.cookie('userBuenasTintas' ,req.session.user,{maxAge:1000*60*60})
-        }
-        res.locals.user = req.session.user
-        console.log(res.locals.user)
-        res.redirect('/')
+            res.redirect('/')
         }else{
             res.render('users',{
                 title: 'Login | Buenas Tintas',
@@ -54,7 +51,9 @@ module.exports = {
     },
     logout: function(req,res){
         req.session.destroy()
-        
+        if(req.cookies.userBuenasTintas){
+            res.cookie('userBuenasTintas',' ',{maxAge:-1});
+        }
         return res.redirect('/')
     },
     agregarRegister: (req,res)=>{
