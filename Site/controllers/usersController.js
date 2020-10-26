@@ -37,8 +37,10 @@ module.exports = {
             }) 
             if(req.body.recordar){
                 res.cookie('userBuenasTintas' ,req.session.user,{maxAge:1000*60*60})
-            } 
+            }
             res.redirect('/')
+
+        
         }else{
             res.render('users',{
                 title: 'Login | Buenas Tintas',

@@ -5,4 +5,5 @@ const localUserCheck = require('../middlewares/localUserCheck');
 /* GET home page. */
 router.get('/',localUserCheck, indexController.index)
 
+
 module.exports = router;

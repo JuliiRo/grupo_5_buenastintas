@@ -121,5 +121,17 @@ Aprovechamos la reunión para realizar la retrospectiva del sprint anterior.
 ## 01/10/20
 
 + Mili terminó sus tareas.
-+ Juli esta terminando de resolver lo suyo
-+ Nico está esperando que Juli termine para poder empezar lo suyo
++ Juli esta terminando de resolver lo suyo.
++ Nico está esperando que Juli termine para poder empezar lo suyo.
+
+## 21/10/20
+
+El objetivo de la reunión fue dividirnos el nuevo sprint, las tareas fueron divididas de la siguiente forma:
+
++ Juli va a crear el esquema y la base de datos, la fecha estipulada es para el sabado 24/10.
++ Nico va a hacer modelos, la fecha de culminación está pensada para el 29/10.
++ Mili se va a encargar de reformular el CRUD de productos y usuarios*
+
+*Mili no pudo instalar los programas necesarios para las bases de datos, por lo cual la idea es poder entregarle con una semana de tiempo para que pueda trabajar sin la DB y luego probarla alguno de los otros dos integrantes en su equipo y ver si funcionan los CRUD correctamente.
+
+El sabado 24/10 nos juntamos nuevamente para ver como viene Juli con el armado de la DB y para hacer la retrospectiva.
