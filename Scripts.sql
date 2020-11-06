@@ -81,7 +81,6 @@ CREATE TABLE IF NOT EXISTS `buenasTintasDB`.`carts` (
   `id_usuario` INT NOT NULL,
   `id_producto` INT NOT NULL,
   `cantidad` INT NOT NULL,
-  `realized_at` TIMESTAMP NULL,
   PRIMARY KEY (`id`),
   INDEX `idUsuario_idx` (`id_usuario` ASC),
   INDEX `idProducto_idx` (`id_producto` ASC),
