@@ -5,7 +5,7 @@ module.exports = (sequelize,dataTypes) => {
         id : {
             type : dataTypes.INTEGER(11),
             allowNull : false,
-            autoIncrement : true,
+            autoIncrement: true,
             primaryKey : true
         },
         bodega: {
@@ -50,7 +50,7 @@ module.exports = (sequelize,dataTypes) => {
 
     const Product = sequelize.define(alias,cols,config);
     Product.associate = function(models){
-        Product.belongsTo(models.categories,{
+        Product.belongsTo(models.Categoria,{
             as : 'categorias',
             foreignKey : 'id_categoria'
         })
@@ -60,7 +60,7 @@ module.exports = (sequelize,dataTypes) => {
             through:'Carts',
             foreignKey:'id_producto',
             otherKey:'id_usuarios',
-            timestamps:false
+            timestamps: true
         
 
         })

@@ -2,7 +2,7 @@ module.exports = {
   "development": {
     "username": "root",
     "password": null,
-    "database": "buenasTintasDB",
+    "database": "buenastintasdb",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "root": 3306

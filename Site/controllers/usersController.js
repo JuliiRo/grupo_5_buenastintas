@@ -1,7 +1,7 @@
 
 const path = require('path');
 const fs = require('fs');
-
+const db = require('../database/models')
 const dbUsers = require(path.join(__dirname,'..','data','dbUsers'))
 const bcrypt = require('bcrypt');
 const {validationResult} = require('express-validator')
@@ -59,25 +59,33 @@ module.exports = {
         return res.redirect('/')
     },
     agregarRegister: (req,res)=>{
-        let idNuevo = 1;
-        dbUsers.forEach(users=>{
-           if(users.id > idNuevo){
-               idNuevo = users.id
-           }
-        })
-        let nuevoUsers={
-            id: idNuevo + 1,
-            categoría:'usuario',
-            nombreCompleto: req.body.nombreCompleto.trim(),
-            correo:req.body.correo.trim(),
-            nacimiento: req.body.nacimiento,
-            image:(req.files[0])?req.files[0].filename:"foto-undefined.png",
-            telefono:Number(req.body.telefono),
-            contraseña:bcrypt.hashSync(req.body.contraseña,10),
+        let errors = validationResult(req);
+        if(errors.isEmpty()){
+            db.Users.create({
+                category: 'cliente',
+                name: req.body.name.trim(),
+                last_name: req.body.last_name.trim(),
+                email: req.body.email.trim(),
+                date: req.body.date,
+                photo: req.body.photo,
+                phone: req.body.phone,
+                password:bcrypt.hashSync(req.body.password,10),
+            })
+            .then(usuario => {
+                //console.log(usuario)
+                return res.redirect('/users/login')
+            })
+            .catch(err => {
+                res.send(err)
+            })
+        }else{
+            res.render('register',{
+                title:"Registrate",
+                css:"users.css",
+                errors:errors.mapped(),
+                old:req.body,
+            })
         }
-        dbUsers.push(nuevoUsers);
-        fs.writeFileSync(path.join(__dirname,"..","data","usersDataBase.json"),JSON.stringify(dbUsers),'utf-8')
-        res.redirect('/users/login')
     },
 
 

@@ -6,18 +6,19 @@ module.exports = (sequelize,dataTypes) => {
         id : {
             type : dataTypes.INTEGER(11),
             allowNull : false,
-            autoIncrement : true,
+            autoIncrement: true,
             primaryKey : true
         },
         category : {
-            type : dataTypes.STRING(15).DEFAULT('cliente'),
+            type : dataTypes.STRING(15),
             allowNull : false,
+            defaultValue: "cliente"
         },
         name : {
             type : dataTypes.STRING(45),
             allowNull : false,
         },
-        lastName : {
+        last_name : {
             type : dataTypes.STRING(45),
             allowNull : false,
         },
@@ -36,22 +37,11 @@ module.exports = (sequelize,dataTypes) => {
         },
         photo: {
             type : dataTypes.STRING(100),
-            allowNull : false,
         },
         phone: {
             type : dataTypes.STRING(45),
             allowNull : false,
-        },
-      created_at: {
-            type : dataTypes,
-            allowNull : false
-        },
-        updated_at: {
-            type : dataTypes,
-            allowNull
         }
-       
-      
        
     }
 
@@ -64,14 +54,14 @@ module.exports = (sequelize,dataTypes) => {
 
 
     const User = sequelize.define(alias,cols,config);
-    User.belongsToMany(models.Productos,{
-        as : 'Productos',
-        through:'Carts',
-        foreignKey:'id_usuarios',
-        otherKey:'id_productos',
-        timestamps:false
+    // User.belongsToMany(models.Productos,{
+    //     as : 'Productos',
+    //     through:'Carts',
+    //     foreignKey:'id_usuarios',
+    //     otherKey:'id_productos',
+    //     timestamps:false
     
 
-    })
+    // })
     return User;
 }

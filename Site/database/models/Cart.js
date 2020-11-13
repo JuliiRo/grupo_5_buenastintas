@@ -26,6 +26,5 @@ module.exports = (sequelize , dataTypes) =>{
     const Carts = sequelize.define(alias , cols , config);
       
    
-      
+    return Carts  
     }
-    return Carts
