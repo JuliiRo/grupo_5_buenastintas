@@ -125,16 +125,16 @@ module.exports = {
    editar:function(req,res){
     //actualizo con funcion update//
     db.Productos.update({
-       
-        name: req.body.name,
-        price: Number(req.body.price),
-        peso: Number(req.body.peso),
+        bodega: req.body.bodega.trim(),
+        nombre: req.body.nombre.trim(),
+        varietal: req.body.varietal.trim(),
+        año: Number(req.body.año),
+        precio:Number(req.body.price),
         discount: Number(req.body.discount),
-        categoria: req.body.categoria,
-        id_subcategoria: Number(req.body.id_subcategoria),
-        description: req.body.description,
-        //modificacion carga de imagen//
-        image: req.body.file
+        category: req.body.category.trim(),
+        description: req.body.description.trim(),
+        image: (req.files[0])?req.files[0].filename: "undefined.jpg",
+      
     },
     {
         //DEPENDE DE LA ID SELECCIONADA, SE EDITAR CADA PRODUCTO.
@@ -143,7 +143,7 @@ module.exports = {
         }
     })
         .then(() => {
-            //dirije a la lista de productos//
+            //REDIRECCIONO A LA LISTA DE PRODUCTOS.
             res.redirect('/products/detalle/'+req.params.id)
         })
 },
