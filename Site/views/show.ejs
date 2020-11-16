@@ -23,9 +23,9 @@
             <h4>Nombre: <%= producto.nombre %> </h4>
             <h4>Varietal: <%= producto.varietal %> </h4>
             <h4>Año: <%= producto.año %> </h4>
-            <h4>Precio: <%= producto.price %> </h4>
-              <h4>Descuento: <%= producto.discount %>% OFF</h4>
-              <h4>Categoría: <%= producto.category %> </h4>
+            <h4>Precio: <%= producto.precio %> </h4>
+              <h4>Descuento: <%= producto.descuento %>% OFF</h4>
+              <h4>Categoría: <%= producto.categoria%> </h4>
              
               <form action ="/admin/eliminar/<%= producto.id %>?_method=DELETE" method="POST">
                 <button type="submit">Eliminar</button>
