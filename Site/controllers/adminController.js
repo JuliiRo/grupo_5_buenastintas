@@ -15,7 +15,7 @@ module.exports = {
      db.Productos.findAll({
          include :[
              {
-                 association : 'categoria'
+                 association : 'Categoria'
              }
          ]
      })
@@ -28,17 +28,16 @@ module.exports = {
       })
     },
     agregar: function(req, res) {
-    
-        db.categorias.findAll({
+   let subCategorias = db.Categoria.findAll({
             order:[
-                'nombre'
+                ['nombre', 'ASC']
             ]
         })
-        .then(categorias => {
+        .then(subCategorias => {
             res.render('admin', {
                 title: "Agregar",
                 css:'admin.css',
-                categorias: categorias
+                categoria: categoria
             }) 
         })
 },
@@ -47,14 +46,14 @@ module.exports = {
            if(errors.isEmpty()){
             db.Productos.create({
  
-            bodega: req.body.bodega.trim(),
-            nombre: req.body.nombre.trim(),
-            varietal: req.body.varietal.trim(),
+            bodega: req.body.bodega,
+            nombre: req.body.nombre,
+            varietal: req.body.varietal,
             año: Number(req.body.año),
-            precio:Number(req.body.price),
-            discount: Number(req.body.discount),
-            category: req.body.category.trim(),
-            description: req.body.description.trim(),
+            precio:Number(req.body.precio),
+            discount: Number(req.body.descuento),
+            categoria: req.body.categoria,
+            description: req.body.descripcion,
             image: (req.files[0])?req.files[0].filename: "undefined.jpg",
       })
       .then(()=>{
@@ -83,22 +82,22 @@ module.exports = {
             },
             include : [
                 {
-                    association :'categoria'
+                    association :'Categoria'
                 }
             ]
         })
        // creo una variable para guardar los productos, para luego recorrerlos//
        let cantidad = db.Productos. count();
        //datos de idcategorias//
-       let idcategorias = db.categorias.findAll()
+       let idcategorias = db.Categoria.findAll()
        //promesa//
        Promise.all([ producto ,idcategorias,cantidad ])
        .then(([ producto,idcategorias,cantidad]) =>{
         res.render('vistaProducto',{
             title: 'Ver / Editar | BT',
             css: 'vistaProducto.css',
-            total: dbProducts.lenght,
-            producto:resultado[0],
+            total:cantidad,
+          idcategorias : idcategorias,
             activeDetail: activeDetail,
             activeEdit:activeEdit,
             showDetail: showDetail,
@@ -125,14 +124,14 @@ module.exports = {
    editar:function(req,res){
     //actualizo con funcion update//
     db.Productos.update({
-        bodega: req.body.bodega.trim(),
-        nombre: req.body.nombre.trim(),
-        varietal: req.body.varietal.trim(),
+        bodega: req.body.bodega,
+        nombre: req.body.nombre,
+        varietal: req.body.varietal,
         año: Number(req.body.año),
-        precio:Number(req.body.price),
-        discount: Number(req.body.discount),
-        category: req.body.category.trim(),
-        description: req.body.description.trim(),
+        precio:Number(req.body.precio),
+        descuento: Number(req.body.descuento),
+        categoria: req.body.categoria,
+        descripcion: req.body.descripcion,
         image: (req.files[0])?req.files[0].filename: "undefined.jpg",
       
     },
@@ -144,7 +143,7 @@ module.exports = {
     })
         .then(() => {
             //REDIRECCIONO A LA LISTA DE PRODUCTOS.
-            res.redirect('/products/detalle/'+req.params.id)
+            res.redirect('/admin/detalle/'+req.params.id)
         })
 },
 eliminar:function(req,res){
