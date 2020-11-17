@@ -1,5 +1,5 @@
 function adminMW(req,res,next){
-    if(req.session.user.categoría == 'administrador'){
+    if(req.session.user && req.session.user.category == 'administrador'){
         next()
     }else{
         res.redirect('/')

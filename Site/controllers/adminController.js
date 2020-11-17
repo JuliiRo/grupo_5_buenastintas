@@ -12,32 +12,33 @@ const dbProducts = require('../data/dbProducts')
 
 module.exports = {
     listar: function(req,res){
+        console.log("**************************")
      db.Productos.findAll({
          include :[
              {
-                 association : 'Categoria'
+                 association : 'categoria'
              }
          ]
      })
-      .then(Productos =>{
+      .then(productos =>{
         res.render('show', {
             title: 'Administrador | Buenas Tintas',
             css: 'show.css',
-            Productos:productos,
+            productos:productos,
         })
       })
     },
     agregar: function(req, res) {
-   let subCategorias = db.Categoria.findAll({
+        db.Categoria.findAll({
             order:[
-                ['nombre', 'ASC']
+                ['name', 'ASC']
             ]
         })
-        .then(subCategorias => {
+        .then(categorias => {
             res.render('admin', {
                 title: "Agregar",
                 css:'admin.css',
-                categoria: categoria
+                categorias: categorias
             }) 
         })
 },

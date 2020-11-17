@@ -51,15 +51,15 @@ module.exports = (sequelize,dataTypes) => {
     const Product = sequelize.define(alias,cols,config);
     Product.associate = function(models){
         Product.belongsTo(models.Categoria,{
-            as : 'categorias',
+            as : 'categoria',
             foreignKey : 'id_categoria'
         })
 
         Product.belongsToMany(models.Users,{
-            as : 'Usuarios',
-            through:'Carts',
+            as : 'usuarios',
+            through:'carts',
             foreignKey:'id_producto',
-            otherKey:'id_usuarios',
+            otherKey:'id_usuario',
             timestamps: true
         
 

@@ -12,7 +12,7 @@
   <section class="principal">
     <div class="container-fluid">
       <div class="row">
-        <% db.forEach(producto => { %>
+        <% productos.forEach(producto => { %>
         <div class="col-12 col-md-6 col-lg-4">
           <div class="contenido">
             <figure>
@@ -25,7 +25,7 @@
             <h4>Año: <%= producto.año %> </h4>
             <h4>Precio: <%= producto.precio %> </h4>
               <h4>Descuento: <%= producto.descuento %>% OFF</h4>
-              <h4>Categoría: <%= producto.categoria%> </h4>
+              <h4>Categoría: <%= producto.categoria.nombre%> </h4>
              
               <form action ="/admin/eliminar/<%= producto.id %>?_method=DELETE" method="POST">
                 <button type="submit">Eliminar</button>
