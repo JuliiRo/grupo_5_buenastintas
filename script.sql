@@ -57,7 +57,7 @@ CREATE TABLE `categories` (
   `id` int(11) NOT NULL AUTO_INCREMENT,
   `name` varchar(45) NOT NULL,
   PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -66,6 +66,7 @@ CREATE TABLE `categories` (
 
 LOCK TABLES `categories` WRITE;
 /*!40000 ALTER TABLE `categories` DISABLE KEYS */;
+INSERT INTO `categories` VALUES (1,'Vino'),(2,'Espumante'),(3,'Whiskie'),(4,'Aperitivo'),(5,'Cerveza');
 /*!40000 ALTER TABLE `categories` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -92,7 +93,7 @@ CREATE TABLE `products` (
   PRIMARY KEY (`id`),
   KEY `idCategoria_idx` (`id_categoria`),
   CONSTRAINT `idCategoria` FOREIGN KEY (`id_categoria`) REFERENCES `categories` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -101,6 +102,7 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
+INSERT INTO `products` VALUES (1,'Trapiche','reserva','Malbec',NULL,750,10,'asdasd','image-1605631648908.jpeg','2020-11-17 16:47:28','2020-11-17 16:47:28',1),(4,'Trapiche','Fond De Cave Gran Reserva','Malbec',NULL,1000,3,'asdasdasdasd','image-1605632346058.jpg','2020-11-17 16:59:06','2020-11-17 16:59:06',1);
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -125,7 +127,7 @@ CREATE TABLE `users` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=4 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -134,7 +136,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'administrador','Nico','Caputo','nico@caputo.com','1995-05-20',NULL,1153796531,'123456',NULL,NULL),(3,'cliente','Nico','Caputo','nicolas@caputo.com','1995-05-20',NULL,1153796531,'$2b$10$ZW/A/haBD9ziHtr99x0ncOAE.3Ai02I7QBZSpj5d0UEYwL07OIKTO','2020-11-13 17:49:52','2020-11-13 17:49:52');
+INSERT INTO `users` VALUES (1,'administrador','Nico','Caputo','nico@caputo.com','1995-05-20',NULL,1153796531,'123456',NULL,NULL),(3,'','Nico','Caputo','nicolas@caputo.com','1995-05-20',NULL,1153796531,'$2b$10$ZW/A/haBD9ziHtr99x0ncOAE.3Ai02I7QBZSpj5d0UEYwL07OIKTO','2020-11-13 17:49:52','2020-11-13 17:49:52'),(4,'administrador','nico','caputo','nico@caputo.com.ar','1995-05-20','photo-1605565814480.png',1153796531,'$2b$10$SmoZK/.bjZBmZeB0yVlq7.3fEdmgxK5ecp9MFPPOjrCfmRCgEiq5O','2020-11-16 22:30:14','2020-11-16 22:30:14');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -147,4 +149,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-11-13 15:25:19
+-- Dump completed on 2020-11-17 14:07:10
