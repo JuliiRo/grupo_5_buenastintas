@@ -52,13 +52,16 @@ module.exports = {
             varietal: req.body.varietal,
             año: Number(req.body.año),
             precio:Number(req.body.precio),
-            discount: Number(req.body.descuento),
-            categoria: req.body.categoria,
-            description: req.body.descripcion,
+            descuento: Number(req.body.descuento),
+            idCategoria: req.body.categoria,
+            descripcion: req.body.descripcion,
             image: (req.files[0])?req.files[0].filename: "undefined.jpg",
       })
       .then(()=>{
-        return res.redirect('admin/show')
+        return res.redirect('/admin')
+    })
+    .catch(err =>{
+        res.send(err)
     })
     }
      }, 
@@ -88,7 +91,7 @@ module.exports = {
             ]
         })
        // creo una variable para guardar los productos, para luego recorrerlos//
-       let cantidad = db.Productos. count();
+       let cantidad = db.Productos.count();
        //datos de idcategorias//
        let idcategorias = db.Categoria.findAll()
        //promesa//
@@ -131,7 +134,7 @@ module.exports = {
         año: Number(req.body.año),
         precio:Number(req.body.precio),
         descuento: Number(req.body.descuento),
-        categoria: req.body.categoria,
+        idCategoria: req.body.categoria,
         descripcion: req.body.descripcion,
         image: (req.files[0])?req.files[0].filename: "undefined.jpg",
       
@@ -155,7 +158,7 @@ eliminar:function(req,res){
         }
     })
         .then(result=>{
-            res.render('/admin')
+            res.redirect('/admin')
         })
 }
  

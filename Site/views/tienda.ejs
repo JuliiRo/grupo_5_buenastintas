@@ -26,20 +26,20 @@
   <section class="principal">
     <div class="container">
       <div class="row">
-        <% productos.forEach(producto => { %>
+        <% Productos.forEach(Productos => { %>
         <div class="col-12 col-md-6 col-lg-3">
           <div class="contenido">
             <figure>
-              <a href="/tienda/<%= producto.id %>">
-                <img src="/images/productos/<%= producto.image %> " alt="">
+              <a href="/tienda/<%= Productos.id %>">
+                <img src="/images/productos/<%= Productos.image %> " alt="">
               </a>
             </figure>
-            <h3><%= producto.bodega %> </h3>
-            <span><%= producto.nombre %> </span>
+            <h3><%= Productos.bodega %> </h3>
+            <span><%= Productos.nombre %> </span>
             <article>
-              $<%- (producto.price - producto.price * producto.discount / 100).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") %>
-               <% if (producto.discount !=0) { %>
-                  <span class="descuento"><%= producto.discount %>% OFF</span>
+              $<%- (Productos.precio - Productos.precio * Productos.descuento / 100).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") %>
+               <% if (Productos.descuento !=0) { %>
+                  <span class="descuento"><%= Productos.descuento %>% OFF</span>
                 <% } %>
       </div>
       

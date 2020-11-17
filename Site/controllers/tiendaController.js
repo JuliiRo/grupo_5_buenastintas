@@ -1,15 +1,18 @@
 const path = require('path');
 const dbProducts = require(path.join(__dirname,'..','data','dbProducts'))
+const db = require('../database/models')
 
 module.exports = {
     //http://localhost:3000/tienda
     tienda:function(req,res){
-        let db = dbProducts
+        db.Productos.findAll()
+        .then( Productos => {
         res.render('tienda', { 
             title: 'Tienda | Buenas tintas',
             css: 'tienda.css',
-            productos:db
+            Productos:Productos
         })
+    })
     },
     //http://localhost:3000/tienda/carrito
     carrito:function(req,res){

@@ -1,6 +1,6 @@
 module.exports = (sequelize,dataTypes) => {
     let alias = "Productos";
-
+ 
     let cols = {
         id : {
             type : dataTypes.INTEGER(11),
@@ -36,7 +36,7 @@ module.exports = (sequelize,dataTypes) => {
             type: dataTypes.STRING(150),
             defaultValue:'undefined.jpg'
       },
-       id_categoria: {
+       idCategoria: {
             type: dataTypes.INTEGER(11),
             allowNull : false
         }
