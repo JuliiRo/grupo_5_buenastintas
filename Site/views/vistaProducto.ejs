@@ -28,8 +28,8 @@
                             <div class="col-12">
                                 <div class="row">
                                     <div class="col-1">
-                                        <% if (producto.id>1) { %>
-                                            <a href="/admin/show/<%- producto.id-1 %>/show " class="text-warning"><i class="fas fa-chevron-circle-left"></i></a>
+                                        <% if (minimo.id !=producto.id) { %>
+                                            <a href="/admin/show/<%= producto.id-1 %>/show " class="text-warning"><i class="fas fa-chevron-circle-left"></i></a>
                                             <% } %>
                                     </div>
                                     <div class="col-10">
@@ -38,8 +38,8 @@
                                         </h3>
                                     </div>
                                     <div class="col-1">
-                                        <% if (producto.id>0 || producto.id <= total) { %>
-                                            <a href="/admin/show/<%- producto.id+1 %>/show " class="text-warning"><i class="fas fa-chevron-circle-right"></i></a>
+                                        <% if (maximo.id != producto.id) { %>
+                                            <a href="/admin/show/<%= producto.id+1 %>/show " class="text-warning"><i class="fas fa-chevron-circle-right"></i></a>
  
                                             <% } %>
                                     </div>
@@ -60,25 +60,25 @@
                                    Varietal: <%= producto.varietal %>
                                 </p>
                                 <p>
-                                    Año: <%= producto.año %>
+                                    Año: <%= producto.cosecha %>
                                 </p>
                                 <p>
-                                    Descripcion: <%= producto.description %>
+                                    Descripcion: <%= producto.descripcion %>
                                 </p>
                                 <div class="row">
                                     <div class="col-12 col-lg-4">
                                         <span><b>Categoría:</b> 
-                                            <%= producto.category %>
+                                            <%= producto.categoria.name %>
                                         </span>
                                     </div>
                                     <div class="col-12 col-md-6 col-lg-4">
                                         <span><b>Precio:</b>  $
-                                        <%=producto.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")%>
+                                         <%=producto.precio.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".")%>
                                     </span>
                                     </div>
                                     <div class="col-12 col-md-6 col-lg-4">
                                         <span><b>Descuento:</b> 
-                                        <%=producto.discount%>%
+                                        <%=producto.descuento%>%
                                     </span>
 
                                     <form action ="/admin/eliminar/<%= producto.id %>?_method=DELETE" method="POST">
@@ -96,11 +96,11 @@
                         <form action="/admin/edit/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
                             <div class="row p-3">
                                 <div class="form-group col-12">
-                                    <p>Bodega:</p><input class="form-control" type="text" value="<%= producto.bodega%>" name="bodega">
+                                    <p>Bodega:</p><input class="form-control" type="text" value="<%= producto.bodega%>" value="<%= producto.image%>" name="bodega">
                                 </div>
                                 <div >
-                                    <figure class="text-center">
-                                        <img src="/images/<%= producto.image %> " alt="" class="img-fluid">
+                                    <figure class="form-group col-12 col-md-8 col-xl-8 mt-3">
+                                        <p>Foto</p><img src="/images/<%= producto.image %> " alt="" class="img-fluid">
                                     </figure>
                                     <input type="file" class="form-control" name="image">
                                 </div>
@@ -111,13 +111,20 @@
                                     <p>Varietal</p><input class="form-control" type="text" value="<%= producto.varietal%>" name="varietal">
                                 </div>
                                 <div class="form-group col-12 col-md-8 col-xl-8 mt-3">
-                                    <p>Año</p><input class="form-control" type="text" value="<%= producto.año%>" name="año">
+                                    <p>Año</p><input class="form-control" type="text" value="<%= producto.cosecha%>" name="cosecha">
+                                </div>
+                                <div class="form-group col-12 col-md-8 col-xl-8 mt-3 grupo-form">
+                                    <h3><label for="">Categoria:</label></h3>
+                                    <select name="categoria" id="algo" value="<%= producto.categoria%>" required>
+                                        <option value="1">Vino</option>
+                                        <option value="2">Espumantes</option>
+                                        <option value="3">Whiskies</option>
+                                        <option value="4">Aperitivos</option>
+                                        <option value="5">Cervezas</option>
+                                    </select>
                                 </div>
                                 <div class="form-group col-12 col-md-8 col-xl-8 mt-3">
-                                    <p>Categoría</p><input class="form-control" type="text" value="<%= producto.category%>" name="category">
-                                </div>
-                                <div class="form-group col-12 col-md-8 col-xl-8 mt-3">
-                                    <p>Descripcion</p><textarea class="form-control" rows="7" name="description" id=""><%= producto.description %></textarea>
+                                    <p>Descripcion</p><textarea class="form-control" rows="7" name="descripcion" id=""><%= producto.descripcion %></textarea>
                                     <p>
                                     </p>
                                     <div class="row">
@@ -130,13 +137,13 @@
                                                 <div class="input-group-prepend">
                                                     <div class="input-group-text">$</div>
                                                 </div>
-                                                <input type="text" class="form-control" value="<%=producto.price%>" name="price">
+                                                <input type="text" class="form-control" value="<%=producto.precio%>" name="precio">
                                             </div>
                                         </div>
                                         <div class="col-6 col-lg-4">
                                             <div class="input-group mb-2 mr-sm-2">
 
-                                                <input type="text" class="form-control" value="<%=producto.discount%>" name="discount">
+                                                <input type="text" class="form-control" value="<%=producto.descuento%>" name="descuento">
                                                 <div class="input-group-prepend">
                                                     <div class="input-group-text">%</div>
                                                 </div>

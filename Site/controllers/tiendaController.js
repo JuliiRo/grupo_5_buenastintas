@@ -37,15 +37,24 @@ module.exports = {
     },
         //http://localhost:3000/tienda/detalle
     detalle:function(req,res){
-        idBebida = req.params.id;
-        let productos = dbProducts.filter(producto=>{
-            return producto.id == idBebida
+        db.Productos.findOne({
+            where: {
+                id:req.params.id
+            },
+            include : [
+                {
+                    association :'categoria'
+                }
+            
+            ]
         })
+        .then(productos =>{
         res.render('detalleProducto', {
             title: 'Detalle de Producto | Buenas tintas',
             css: 'detalleProducto.css',
-            producto:productos[0],
+            productos:productos,
         })
+    })
     }
     
 }

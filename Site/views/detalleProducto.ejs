@@ -8,25 +8,25 @@
               <div class="row">
                   <div class="col-12 col-lg-8">
                       <figure class="text-center">
-                          <img src="/images/productos/<%=producto.image%> " alt=<%= producto.image %> class="img-fluid">
+                          <img src="/images/productos/<%=productos.image%> " alt=<%= productos.image %> class="img-fluid">
                       </figure>
                       <p>
-                         <%= producto.description %> 
+                         <%= productos.descripcion %> 
                       </p>
                   </div>
                   <div class="col-12 col-lg-4 datos">
                       <h2 class="my-4">
-                         <%= producto.nombre %> 
+                         <%= productos.nombre %> 
                       </h2>
                       <h4 class="my-4">
-                        <%= producto.bodega %> 
+                        <%= productos.bodega %> 
                       </h4>
                       <h4>
-                        <%= producto.varietal %> <%= producto.año %> 
+                        <%= productos.varietal %> <%= productos.cosecha %> 
                       </h4>
-                      <span><strike>$<%= producto.price.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") %></strike> <strong> <%= producto.discount %>  % OFF</strong></span>
+                      <span><strike>$<%= productos.precio.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") %></strike> <strong> <%= productos.descuento %>  % OFF</strong></span>
                       <h2>
-                        $<%- (producto.price - producto.price * producto.discount / 100).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") %> 
+                        $<%- (productos.precio - productos.precio * productos.descuento / 100).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") %> 
                       </h2>
                       <button>Comprar ahora</button>
                   </div>

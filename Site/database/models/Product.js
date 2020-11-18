@@ -20,6 +20,9 @@ module.exports = (sequelize,dataTypes) => {
             type : dataTypes.STRING(100),
             
         },
+        cosecha:{
+            type : dataTypes.INTEGER(11),
+        },
         precio : {
             type : dataTypes.INTEGER(11),
             allowNull : false

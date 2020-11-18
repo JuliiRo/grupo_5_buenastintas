@@ -8,9 +8,10 @@ router.get('/', adminMW ,adminController.listar);
 /* GET agregar. */
 router.get('/agregar',adminMW , adminController.agregar);
 /* POST agregar. */
-router.post('/agregar',upImagesBebidas.any(), adminController.agregarProducto);
+router.post('/agregar',adminMW,upImagesBebidas.any(), adminController.agregarProducto);
 /* Ver / Editar */
-router.get('/show/:id/:flap?',adminMW ,adminController.show);
+router.get('/show/:id/:flap?',adminMW,adminController.show);
+
 /* Editar producto */
 router.put('/edit/:id', adminMW ,upImagesBebidas.any(), adminController.editar)
 /* Eliminar producto */

@@ -50,7 +50,7 @@ module.exports = {
             bodega: req.body.bodega,
             nombre: req.body.nombre,
             varietal: req.body.varietal,
-            año: Number(req.body.año),
+            cosecha: Number(req.body.cosecha),
             precio:Number(req.body.precio),
             descuento: Number(req.body.descuento),
             idCategoria: req.body.categoria,
@@ -64,9 +64,8 @@ module.exports = {
         res.send(err)
     })
     }
-     }, 
+     },
     show:function(req,res){
-        let idProducto = req.params.id;
         let flap = req.params.flap;
         let activeDetail;
         let activeEdit;
@@ -80,44 +79,49 @@ module.exports = {
             activeEdit = 'active';
             showEdit = 'show';
         }
-        let producto = db.Producto.findOne({
-            where : {
-                id : idProducto
-            },
+        let producto = db.Productos.findByPk(req.params.id,{
+            
             include : [
                 {
-                    association :'Categoria'
+                    association :'categoria'
                 }
             ]
         })
-       // creo una variable para guardar los productos, para luego recorrerlos//
-       let cantidad = db.Productos.count();
+        let minimo = db.Productos.min('id')
+        let maximo = db.Productos.max('id')
+        
+       
        //datos de idcategorias//
-       let idcategorias = db.Categoria.findAll()
+       let categorias = db.Categoria.findAll()
        //promesa//
-       Promise.all([ producto ,idcategorias,cantidad ])
-       .then(([ producto,idcategorias,cantidad]) =>{
+       Promise.all([ producto ,categorias,minimo,maximo])
+       .then(([ producto,categorias,minimo,maximo]) =>{
         res.render('vistaProducto',{
             title: 'Ver / Editar | BT',
             css: 'vistaProducto.css',
-            total:cantidad,
-          idcategorias : idcategorias,
+       // creo una variable para guardar los productos, para luego recorrerlos//
+            categorias :categorias,
             activeDetail: activeDetail,
             activeEdit:activeEdit,
             showDetail: showDetail,
             showEdit:showEdit,
+            producto:producto,
+            minimo:minimo,
+            maximo:maximo
+
        })
+       .catch(err =>{res.send(err)})
        
         })
     },
     detalle:function(req,res){
         //busco en la base de datos el id del producto seleccionado.
         db.Productos.findByPk(req.params.id)
-            .then(producto =>{
+            .then(productos =>{
                 res.render("detalleProducto",{
                     title: "Detalle del producto",
                     css: "admin.css",
-                    producto: producto
+                    productos: productos
                 })
             })
             .catch(error =>{
@@ -131,7 +135,7 @@ module.exports = {
         bodega: req.body.bodega,
         nombre: req.body.nombre,
         varietal: req.body.varietal,
-        año: Number(req.body.año),
+        cosecha: Number(req.body.cosecha),
         precio:Number(req.body.precio),
         descuento: Number(req.body.descuento),
         idCategoria: req.body.categoria,
@@ -147,7 +151,7 @@ module.exports = {
     })
         .then(() => {
             //REDIRECCIONO A LA LISTA DE PRODUCTOS.
-            res.redirect('/admin/detalle/'+req.params.id)
+            res.redirect('/admin')
         })
 },
 eliminar:function(req,res){
