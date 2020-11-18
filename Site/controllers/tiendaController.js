@@ -1,6 +1,8 @@
 const path = require('path');
 const dbProducts = require(path.join(__dirname,'..','data','dbProducts'))
 const db = require('../database/models')
+const Sequelize = require('sequelize');
+const Op = Sequelize.Op;
 
 module.exports = {
     //http://localhost:3000/tienda
@@ -22,18 +24,37 @@ module.exports = {
         })
     },
     search:function(req,res){
-        let busqueda= req.query.search;
-        let productos=[];
-        dbProducts.forEach(producto => {
-            if(producto.bodega.toLowerCase().includes(busqueda.toLowerCase()) || producto.nombre.toLowerCase().includes(busqueda.toLowerCase())){
-                productos.push(producto)
-            }
-        });
-        res.render('tienda',{
-            title: 'Buscador | Buenas tintas',
-            css: 'tienda.css',
-            productos:productos
+        db.Productos.findAll({
+            where : {
+                bodega : {
+                    [Op.substring] : req.body.search
+                },
+            },
+            
+            // where : {
+            //     nombre : {
+            //         [Op.substring] : req.body.search
+            //     }
+            // },
+            // where : {
+            //     varietal : {
+            //         [Op.substring] : req.body.search
+            //     },
+            // },
+            // where : {
+            //     idCategoria : {
+            //         [Op.substring] : req.body.search
+            //     },
+            // }
         })
+        .then(productos => {
+            res.render('tienda',{
+                title: 'Buscador | Buenas tintas',
+                css: 'tienda.css',
+                Productos:productos
+            })
+        })
+
     },
         //http://localhost:3000/tienda/detalle
     detalle:function(req,res){

@@ -6,7 +6,7 @@ const logMiddleware = require('../middlewares/logMiddleware')
 /* GET home page. */
 router.get('/', tiendaController.tienda);
 router.get('/carrito', logMiddleware, tiendaController.carrito);
-router.get('/search',tiendaController.search)
+router.post('/search',tiendaController.search)
 router.get('/:id', tiendaController.detalle);
 
 
