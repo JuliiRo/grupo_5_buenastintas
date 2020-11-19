@@ -65,54 +65,89 @@ module.exports = {
     })
     }
      },
-    show:function(req,res){
+     show:function(req,res){
+        let idProducto = req.params.id;
+        
         let flap = req.params.flap;
         let activeDetail;
         let activeEdit;
         let showDetail;
         let showEdit;
-
-        if(flap=="show"){
-            activeDetail = 'active';
-            showDetail = 'show';
+    
+        if(flap == "show"){
+            activeDetail = "active";
+            showDetail = "show";
         }else{
-            activeEdit = 'active';
-            showEdit = 'show';
+            activeEdit = "active";
+            showEdit = "show";
         }
-        let producto = db.Productos.findByPk(req.params.id,{
-            
-            include : [
+        
+        for (let i = 0; i < productos.length ; i++) {
+            console.log(i)
+           if(productos[i].id==idProducto){
+    
+                posicion=i
+                //break
+           }
+    
+        }
+    
+    
+        // //let posicion = productos.filter(producto =>{
+        //     return producto.id == idProducto
+        // })//
+        
+    
+       let producto = db.Productos.findByPk(idProducto,{
+            include: [
                 {
-                    association :'categoria'
+                    association : 'categoria'
                 }
             ]
         })
+    
         let minimo = db.Productos.min('id')
         let maximo = db.Productos.max('id')
-        
-       
-       //datos de idcategorias//
-       let categorias = db.Categoria.findAll()
-       //promesa//
-       Promise.all([ producto ,categorias,minimo,maximo])
-       .then(([ producto,categorias,minimo,maximo]) =>{
-        res.render('vistaProducto',{
-            title: 'Ver / Editar | BT',
-            css: 'vistaProducto.css',
-       // creo una variable para guardar los productos, para luego recorrerlos//
-            categorias :categorias,
-            activeDetail: activeDetail,
-            activeEdit:activeEdit,
-            showDetail: showDetail,
-            showEdit:showEdit,
-            producto:producto,
-            minimo:minimo,
-            maximo:maximo
-
-       })
-       .catch(err =>{res.send(err)})
-       
+    
+        let productos = db.Productos.findAll({
+            include: [
+                {
+                    association : 'categoria'
+                }
+            ]
         })
+    
+    
+        
+        Promise.all([ producto, productos, minimo, maximo])
+           .then(([ producto, productos, minimo ,maximo]) =>{
+            console.log(minimo+" -- "+ producto.id+" -- "+ maximo)
+    
+    let posicion 
+        for (let i = 0; i< productos.length; i ++){
+            console.log (i)
+            if (productos [i].id==idProducto){
+                posicion=i
+                break
+            }
+        }
+        res.render('productsShow',{
+            title: "Ver / Editar Producto",
+            css: 'products.css',
+            posicion: posicion,
+            productos: productos,
+            producto: producto,
+            activeDetail:activeDetail,
+            activeEdit:activeEdit,
+            showEdit:showEdit,
+            showDetail:showDetail,
+            minimo: minimo,
+            maximo: maximo
+        })
+        
+    
+        })
+        
     },
     detalle:function(req,res){
         //busco en la base de datos el id del producto seleccionado.
