@@ -93,7 +93,7 @@ CREATE TABLE `products` (
   PRIMARY KEY (`id`),
   KEY `idCategoria_idx` (`id_categoria`),
   CONSTRAINT `idCategoria` FOREIGN KEY (`id_categoria`) REFERENCES `categories` (`id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -102,7 +102,7 @@ CREATE TABLE `products` (
 
 LOCK TABLES `products` WRITE;
 /*!40000 ALTER TABLE `products` DISABLE KEYS */;
-INSERT INTO `products` VALUES (1,'Trapiche','reserva','Malbec',NULL,750,10,'asdasd','image-1605631648908.jpeg','2020-11-17 16:47:28','2020-11-17 16:47:28',1),(4,'Trapiche','Fond De Cave Gran Reserva','Malbec',NULL,1000,3,'asdasdasdasd','image-1605632346058.jpg','2020-11-17 16:59:06','2020-11-17 16:59:06',1);
+INSERT INTO `products` VALUES (1,'Trapiche','reserva','Malbec',2016,750,10,'Trapiche Reserva Malbec:\r\nDe color rojo violáceo de aroma ahumado y avainillado de final dulce y largo. Las uvas son cosechadas en forma manual, provenientes de racimos seleccionados. El vino está cri','image-1605744522208.jpg','2020-11-17 16:47:28','2020-11-19 00:08:42',1),(2,'Fernet','Branca','',0,1000,15,'Fernandoooo','image-1605727604766.jpg','2020-11-17 20:59:03','2020-11-18 19:26:44',4),(3,'Concha y Toro','Casillero del Diablo','chardonnay',2016,700,0,'Lorem ipsum','image-1605646952147.jpg','2020-11-17 21:02:32','2020-11-17 21:02:32',1),(4,'','Campari','',0,850,5,'Campari','image-1605743732261.jpg','2020-11-18 23:55:32','2020-11-18 23:55:32',4),(5,'','Gancia','',0,450,0,'Gancia','image-1605743777687.jpg','2020-11-18 23:56:17','2020-11-18 23:56:17',4),(6,'Dom Perignon','Brut Extra','Chardonnay',0,40000,5,'Dom Perignon','image-1605743926489.jpeg','2020-11-18 23:58:46','2020-11-18 23:58:46',2),(7,'Rutini','Brut Natural','50% Chardonnay, 50% Pinot Noir de Gualtallary',2016,3000,10,'Dorado con reflejos amarillo verdosos. Burbuja pequeña, perezosa y muy persistente. Nariz compleja, donde se integran armoniosamente el aroma de pan sin hornear con frutas ( ananá, durazno blanco). En','image-1605744094988.webp','2020-11-19 00:01:34','2020-11-19 00:01:34',2),(8,'Johnnie Walker','Blue Label','',0,25000,15,'Johnnie Walker Blue Label es mezclado para recrear el auténtico sabor y carácter de algunas de las mezclas de whisky mas tempranas creadas en el siglo 19, otorgandole un rico y turboso gusto combinado','image-1605744202249.jpg','2020-11-19 00:03:22','2020-11-19 00:03:22',3),(9,'Jack Daniels','N° 7','Bourbon',0,3500,0,'Jack Daniel\'s es una destilería y marca de whiskey estadounidense de Tennessee. La diferencia más notable es que el whisky Tennessee es filtrado en carbón de arce sacarino, dándole un sabor y aroma di','image-1605744328148.jpg','2020-11-19 00:05:28','2020-11-19 00:05:28',3),(14,'','Peroni','',0,150,5,'La verdadera birra italiana','image-1605744623218.jpg','2020-11-19 00:10:23','2020-11-19 00:10:23',5),(15,'','Corona','',0,200,5,'Cerveza Corona','image-1605744675057.webp','2020-11-19 00:11:15','2020-11-19 00:11:15',5);
 /*!40000 ALTER TABLE `products` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -127,7 +127,7 @@ CREATE TABLE `users` (
   `updated_at` timestamp NULL DEFAULT NULL,
   PRIMARY KEY (`id`),
   UNIQUE KEY `id_UNIQUE` (`id`)
-) ENGINE=InnoDB AUTO_INCREMENT=5 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=8 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -136,7 +136,7 @@ CREATE TABLE `users` (
 
 LOCK TABLES `users` WRITE;
 /*!40000 ALTER TABLE `users` DISABLE KEYS */;
-INSERT INTO `users` VALUES (1,'administrador','Nico','Caputo','nico@caputo.com','1995-05-20',NULL,1153796531,'123456',NULL,NULL),(3,'','Nico','Caputo','nicolas@caputo.com','1995-05-20',NULL,1153796531,'$2b$10$ZW/A/haBD9ziHtr99x0ncOAE.3Ai02I7QBZSpj5d0UEYwL07OIKTO','2020-11-13 17:49:52','2020-11-13 17:49:52'),(4,'administrador','nico','caputo','nico@caputo.com.ar','1995-05-20','photo-1605565814480.png',1153796531,'$2b$10$SmoZK/.bjZBmZeB0yVlq7.3fEdmgxK5ecp9MFPPOjrCfmRCgEiq5O','2020-11-16 22:30:14','2020-11-16 22:30:14');
+INSERT INTO `users` VALUES (1,'administrador','Nico','Caputo','nico@caputo.com','1995-05-20',NULL,1153796531,'123456',NULL,NULL),(3,'','Nico','Caputo','nicolas@caputo.com','1995-05-20',NULL,1153796531,'$2b$10$ZW/A/haBD9ziHtr99x0ncOAE.3Ai02I7QBZSpj5d0UEYwL07OIKTO','2020-11-13 17:49:52','2020-11-13 17:49:52'),(4,'administrador','nico','caputo','nico@caputo.com.ar','1995-05-20','photo-1605726763107.png',1153796531,'$2b$10$SmoZK/.bjZBmZeB0yVlq7.3fEdmgxK5ecp9MFPPOjrCfmRCgEiq5O','2020-11-16 22:30:14','2020-11-18 19:12:43'),(5,'cliente','Nico','Caputo','nico@capu.com','1995-05-20','foto-undefined.png',1153796531,'$2b$10$ov084mG0RArofrqIztFS4eJ4.rQOQlOtfHjvHqlVw1tqlgEAACpGO','2020-11-17 22:21:38','2020-11-17 22:21:38'),(6,'cliente','Nico','Caputo','nicolas@capu.com','1995-05-20','photo-1605743598079.png',1153796531,'$2b$10$hb0PqF9twFnZSzXEyYhLMeiHRfI5JwwnuOag2QM74Scygxrn9AQH6','2020-11-18 23:53:18','2020-11-18 23:53:18'),(7,'administrador','Admin','Buenas Tintas','admin@buenastintas.com','1995-05-20','photo-1605744978652.png',1153796531,'$2b$10$/O3vFz4ltuZq2db6nvRkL.BkrOh9PT0asrIX.atQj17x0mjxArBoa','2020-11-19 00:16:18','2020-11-19 00:16:18');
 /*!40000 ALTER TABLE `users` ENABLE KEYS */;
 UNLOCK TABLES;
 /*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
@@ -149,4 +149,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2020-11-17 14:07:10
+-- Dump completed on 2020-11-18 21:18:40

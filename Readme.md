@@ -76,4 +76,4 @@ Para entrar a Administrar ingresar en login y loguearse con admin@buenastintas.c
 
 ## Entrar al carrito
 
-Para entrar al carrito deberás estar logueado. Usuario nico@caputo.com pass:123456
+Para entrar al carrito deberás estar logueado. Usuario nicolas@capu.com pass:123456 o registrarse
