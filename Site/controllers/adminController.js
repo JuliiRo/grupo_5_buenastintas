@@ -81,18 +81,6 @@ module.exports = {
             activeEdit = "active";
             showEdit = "show";
         }
-        
-        for (let i = 0; i < productos.length ; i++) {
-            console.log(i)
-           if(productos[i].id==idProducto){
-    
-                posicion=i
-                //break
-           }
-    
-        }
-    
-    
         // //let posicion = productos.filter(producto =>{
         //     return producto.id == idProducto
         // })//
@@ -122,7 +110,7 @@ module.exports = {
         Promise.all([ producto, productos, minimo, maximo])
            .then(([ producto, productos, minimo ,maximo]) =>{
             console.log(minimo+" -- "+ producto.id+" -- "+ maximo)
-    
+            
     let posicion 
         for (let i = 0; i< productos.length; i ++){
             console.log (i)
@@ -131,9 +119,9 @@ module.exports = {
                 break
             }
         }
-        res.render('productsShow',{
+        res.render('vistaProducto',{
             title: "Ver / Editar Producto",
-            css: 'products.css',
+            css: 'vistaProducto.css',
             posicion: posicion,
             productos: productos,
             producto: producto,
