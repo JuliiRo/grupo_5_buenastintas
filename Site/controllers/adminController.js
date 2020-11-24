@@ -163,7 +163,7 @@ module.exports = {
         descuento: Number(req.body.descuento),
         idCategoria: req.body.categoria,
         descripcion: req.body.descripcion,
-        image: (req.files[0])?req.files[0].filename: "undefined.jpg",
+        image: (req.files[0])?req.files[0].filename:req.session.user.image,
       
     },
     {

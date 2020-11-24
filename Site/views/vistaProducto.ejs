@@ -96,32 +96,37 @@
                                 <div class="form-group col-12">
                                     <p>Bodega:</p><input class="form-control" type="text" value="<%= producto.bodega%>" value="<%= producto.image%>" name="bodega">
                                 </div>
+                             
+                                <div class="form-group col-12">
+                                    <p>Nombre:</p><input class="form-control" type="text" value="<%= producto.nombre%>" name="nombre">
+                                </div>
                                 <div >
-                                    <figure class="form-group col-12 col-md-8 col-xl-8 mt-3">
-                                        <p>Foto</p><img src="/images/<%= producto.image %> " alt="" class="img-fluid">
+                                    <figure class="form-group col-12">
+                                        <p>Foto actual</p><img src="/images/<%= producto.image %> " alt="" class="img-fluid">
+                                        <img id="fotoActual" src="/images/productos/<%= producto.image %> " alt="foto actual">
                                     </figure>
                                     <input type="file" class="form-control" name="image">
                                 </div>
-                                <div class="form-group col-12 col-md-8 col-xl-8 mt-3">
-                                    <p>Nombre:</p><input class="form-control" type="text" value="<%= producto.nombre%>" name="nombre">
-                                </div>
-                                <div class="form-group col-12 col-md-8 col-xl-8 mt-3">
+                                <div class="form-group col-12 ">
                                     <p>Varietal</p><input class="form-control" type="text" value="<%= producto.varietal%>" name="varietal">
                                 </div>
-                                <div class="form-group col-12 col-md-8 col-xl-8 mt-3">
+                                <div class="form-group col-12 ">
                                     <p>Año</p><input class="form-control" type="text" value="<%= producto.cosecha%>" name="cosecha">
                                 </div>
-                                <div class="form-group col-12 col-md-8 col-xl-8 mt-3 grupo-form">
+                                <div class="form-group col-12 grupo-form">
                                     <h3><label for="">Categoria:</label></h3>
-                                    <select name="categoria" id="algo" value="<%= producto.categoria%>" required>
-                                        <option value="1">Vino</option>
-                                        <option value="2">Espumantes</option>
-                                        <option value="3">Whiskies</option>
-                                        <option value="4">Aperitivos</option>
-                                        <option value="5">Cervezas</option>
-                                    </select>
+                                    <select class="list-group" name="categoria" id="algo" value="<%= producto.categoria%>" selected>
+                                        <% if(producto.categoria.name){ %> 
+                                            <option class="list-group-item active" value= '<%=producto.id %>'><%=producto.categoria.name%></option>
+                                            <% } %>
+                                                <option class="list-group-item" value="1">Vino</option>
+                                                <option class="list-group-item" value="2">Espumantes</option>
+                                                <option class="list-group-item" value="3">Whiskies</option>
+                                                <option class="list-group-item" value="4">Aperitivos</option>
+                                                <option class="list-group-item" value="5">Cervezas</option>
+                                            </select>
                                 </div>
-                                <div class="form-group col-12 col-md-8 col-xl-8 mt-3">
+                                <div class="form-group col-12 ">
                                     <p>Descripcion</p><textarea class="form-control" rows="7" name="descripcion" id=""><%= producto.descripcion %></textarea>
                                     <p>
                                     </p>
