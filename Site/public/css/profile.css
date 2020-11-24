@@ -1,33 +1,42 @@
 @import "style.css";
 
 
-div .imagenes{
-    width: 50%;
-    margin-left: 20%;
+/* Datos del usuario Mobile */
+
+.contenedor span img{
+    width: 90%;
+}
+div span img{
     margin-bottom: 20px;
 }
-div span #AuLetra{
-    padding: 0px;
 
-}
-div input{
-    border: 1px solid black;
+.perfil h5{
     width: 100%;
-    margin-bottom: 15px;
 }
-div h5{
-    padding: 5px;
-    width: 100%;
-    border: 1px solid black;
-    margin-bottom: 15px;
-}
-div label{
-    width: 95%;
-    margin-left: 14px;
+.perfil h5{
+    margin-top: 15px;
+    border: black solid 1px;
 }
 
-div button #boton{
-    width:60% ;
-    justify-content: right;
+/* Editar datos del usuario Mobile */
+.editar input{
+    width:100%;
+    margin-bottom: 10px;
+ }
+@media(max-width:768px){
+    /* Datos del usuario Tablet */
+    .contenedor span img{
+        width:70%;
+    }
+    
 }
-
+@media(max-width:1024px){
+    /* Datos del usuario Laptop */
+    .contenedor span img{
+        width: 100%;
+    }
+    .editar input{
+        display: inline-block;
+    }
+ 
+}

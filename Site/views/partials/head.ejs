@@ -16,5 +16,9 @@
     <link rel="shortcut icon" type="image/svg" href="/images/admin/BT.svg"/>
     
     <link rel="stylesheet" href="/css/<%= css %> " />
+
+    <% if (typeof script !== 'undefined') { %>
+        <script type="text/javascript" src="/javascripts/<%= script %> "></script>
+    <% } %>
 </head>
 <body>

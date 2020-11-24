@@ -6,7 +6,7 @@
         <div class="row principal">
             <div class="col-12">
                 <div class="contenido">
-                    <ul class="nav nav-tabs " id="myTab" role="tablist">
+                    <ul class="nav nav-tabs barra " id="myTab" role="tablist">
                         <li class="nav-item " role="presentation">
                           <a class="nav-link active" id="home-tab" data-toggle="tab" href="#datos" role="tab" aria-controls="home"
                             aria-selected="true">Mis Datos</a>
@@ -20,96 +20,94 @@
                         <div class="tab-pane fade show active p-4" id="datos" role="tabpanel" aria-labelledby="home-tab">
                             <div class="contenedor">
                                 <div class="row">
-                                    <div class="col-4 ">
-                                        <div class="d-flex align-items-center ">
-                                            <span>
-                                                <img src="/images/users/<%= user.photo %>  "width="100%">
+                                    <div class="col-12 col-md-12  col-lg-4 col-xl-4">
+                                        <div class=" d-flex ">
+                                            <span class="">
+                                                <img src="/images/users/<%= user.photo %> ">
                                             </span>
                                         </div>
                                     </div>
-                                    <div class="col-8 ">
-                                        <div class="col-12 col-xl-6 d-flex " >
+                                    <div class="col-12 col-md-12 col-lg-8 col-xl-8 perfil" style ="width: 100%;" >
+                                        <div class="d-flex   " >
                                             <h5 id="">Nombre: <%= user.name %></h5>
                                         </div>
-                                        <div class="col-12 col-xl-6 d-flex  " >
+                                        <div class=" d-flex  " >
                                             <h5 id="">Apellido: <%= user.last_name %></h5>
                                         </div>
-                                        <div class="col-12 col-xl-6 d-flex " >
+                                        <div class="d-flex " >
                                             <h5 id="">Email: <%= user.email %></h5>
                                         </div>
-                                        <div class="col-12 col-xl-6 d-flex  ">
-                                            <h5 id=""> Fecha de Nacimiento: <%= user.date %></h5>
+                                        <div class="d-flex   ">
+                                            <h5 id=""> Fecha: <%= user.date %></h5>
                                         </div>
-                                        <div class="col-12 col-xl-6 d-flex ">
+                                        <div class="d-flex  ">
                                             <h5 id="">Telefono: <%= user.phone %></h5>
                                         </div>
-                                    </div>
-                                    <form action="/users/delete/<%= user.id %>?_method=DELETE" method="POST">
-                                        <button type="submit" class="btn-sm btn-danger" id="darseBaja">Darse de baja</button>
-                                   </form>
+                                        <div class="delet">
+                                            <form action="/users/delete/<%= user.id %>?_method=DELETE" method="POST">
+                                                <button type="submit" class="btn-sm btn-danger" id="darseBaja">Darse de baja</button>
+                                            </form>
+                                        </div>
+                                </div>
                                 </div>
                             </div>
                         </div>
                         <div class="tab-pane fade show  p-4 " id="editar" role="tabpanel" aria-labelledby="profile-tab">
-                            <div class="contenedor">
-                                <div class="row">
-                                    <form action="/users/updateProfile/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
-                                        <div class="">
-                                            <div class="d-flex align-items-center imagenes">
-                                                <span>
-                                                    <img src="/images/users/<%= user.photo %> "width="100%">
+                            <form action="/users/updateProfile/<%= user.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                                <div class="contenedor">
+                                    <div class="row">
+                                        <div class="col-12 col-md-12  col-lg-4 col-xl-4">
+                                            <div class=" d-flex ">
+                                                <span class="">
+                                                    <img src="/images/users/<%= user.photo %> ">
                                                 </span>
                                             </div>
                                         </div>
-                                        <div class=" col-12 col-xl-6 " >
-                                            <input type="file" placeholder="Actualizar Foto" name="photo" class="boton">
-                                        </div>
-                                        <div class="">
-                                            <div class="col-12 col-xl-6 d-flex " >
-                                                <span id="AuLetra">Nombre:</span>
-                                                <input id="txtpas" type="text" name="name" value="<%= user.name %>" placeholder="Actualizar Nombre" disabled>
+                                        <div class="col-12 col-md-12 col-lg-8 col-xl-8 editar" style ="width: 100%;" >
+                                            <div class=" boton">
+                                                <input id="" type="file" name="photo" class="">
                                             </div>
-                                            <div class="col-12 col-xl-6 d-flex  " >
-                                                <span id="AuLetra">Apellido:</span>
-                                                <input id="txtpas" type="text" name="name" value="<%= user.last_name %>"  disabled>
+                                            <div class="d-flex" >
+                                                <span id="">Nombre:</span>
+                                                <input id="" type="text" name="name" value="<%= user.name %>" placeholder="Actualizar Nombre" disabled>
                                             </div>
-                                            <div class=" col-12 col-xl-6 d-flex " >
-                                                <span id="AuLetra">Email:</span>
-                                                <input id="txtpas" type="email" name="email" value="<%= user.email %>" placeholder="Actualizar Email" disabled>
-                                              </div>
-                                            <div class=" col-12 col-xl-6 d-flex ">
-                                                <span id="AuLetra">Nacimiento:</span>
-                                                <input id="txtpas" type="date" name="date" value="<%= user.date %>" placeholder="Actualizar fecha">
+                                            <div class="d-flex" >
+                                                <span id="">Apellido:</span>
+                                                <input id="" type="text" name="name" value="<%= user.last_name %>"  disabled>
                                             </div>
-                                            
-                                            <div class=" col-12 col-xl-6  d-flex">
-                                                <span id="AuLetra">Telefono:</span>
-                                                <input id="txtpas" type="tel" name="phone" value="<%= user.phone %>" placeholder="Actualizar Telefono">
+                                            <div class="d-flex" >
+                                                <span id="">Email:</span>
+                                                <input id="" type="email" name="email" value="<%= user.email %>" placeholder="Actualizar Email" disabled>
                                             </div>
-                                            <!--<div class="form-group col-12">
+                                            <div class=" d-flex">
+                                                <span id="">Fecha:</span>
+                                                <input id="" type="date" name="date" value="<%= user.date %>" placeholder="Actualizar fecha">
+                                            </div>
+                                            <div class="d-flex">
+                                                <span id="">Telefono:</span>
+                                                <input id="" type="tel" name="phone" value="<%= user.phone %>" placeholder="Actualizar Telefono">
+                                            </div>
+                                            <!--<div class="d-flex">
                                                 <label for="inputAddress2">Dirección</label>
                                                 <input type="text" name="address" class="form-control" value="<%= user.address %>">
                                             </div>
-                                            <div class=" col-12 col-xl-6  d-flex">
-                                                <span id="AuLetra">Ciudad:</span>
-                                                <input id="txtpas" type="tel" name="city" value="<%= user.city %>" placeholder="Actualizar Ciudad">
+                                            <div class="d-flex ">
+                                                <span id="">Ciudad:</span>
+                                                <input id="" type="tel" name="city" value="<%= user.city %>" placeholder="Actualizar Ciudad">
                                             </div>
-                                             <div class=" col-12 col-xl-6  d-flex">
-                                                <span id="AuLetra">Provincia:</span>
-                                                <input id="txtpas" type="tel" name="province" value="<%= user.province %>" placeholder="Actualizar Provincia">
+                                             <div class="d-flex">
+                                                <span id="">Provincia:</span>
+                                                <input id="" type="tel" name="province" value="<%= user.province %>" placeholder="Actualizar Provincia">
                                             </div>-->
-
+        
                                             <div class="button-algo" >
                                                 <button type="submit" class="btn-sm btn-primary m-1"> Actualizar datos</button>
                                                 <button type="reset" class="btn-sm btn-secondary m-1">Cancelar</button>
                                             </div> 
                                         </div>
-                                    
-                                   </form>
-                            
-                                </div> 
-                            </div>
-                          </div>   
+                                    </div> 
+                                </div>
+                           </form>
                         </div>
                     </div>
                 </div>

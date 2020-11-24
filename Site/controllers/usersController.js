@@ -18,7 +18,8 @@ module.exports = {
     register:function(req,res){
         res.render('register', { 
             title: 'Registro | Buenas Tintas',
-            css: 'users.css'
+            css: 'users.css',
+            script : 'registerUser.js'
         })
     },
     processLogin:function(req,res){
@@ -91,6 +92,7 @@ module.exports = {
                 css:"users.css",
                 errors:errors.mapped(),
                 old:req.body,
+                script : 'registerUser.js'
             })
         }
     },
