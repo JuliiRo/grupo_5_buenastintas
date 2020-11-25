@@ -4,13 +4,13 @@ window.addEventListener('load', function(){
     let formulario = this.document.querySelector('form#register')
 
     let inputName = formulario.querySelector('input[name="name"]')
-    let inputLast_name = formulario.querySelector[1]
-    let inputEmail =formulario.querySelector[2]
-    // let inputDate = formulario.querySelector[3]
-    let inputPhoto = formulario.querySelector[4]
-    let inputPhone = formulario.querySelector[5]
-    let inputPassword =formulario.querySelector[6]
-    let inputBases = formulario.querySelector[7]
+    let inputLast_name = formulario.querySelector('input[name="last_name"]')
+    let inputEmail =formulario.querySelector('input[name="email"]')
+    // let inputDate = formulario.querySelector('input[name="date"]')
+    let inputPhoto = formulario.querySelector('input[name="photo"]')
+    let inputPhone = formulario.querySelector('input[name="phone"]')
+    let inputPassword =formulario.querySelector('input[name="password"]')
+    let inputBases = formulario.querySelector('input[name="bases"]')
 
     let errores ={}
     let regExPassword = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/;
