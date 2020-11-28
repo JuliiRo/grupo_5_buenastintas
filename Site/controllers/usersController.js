@@ -11,7 +11,8 @@ module.exports = {
     login:function(req,res){
         res.render('users', { 
             title: 'Login | Buenas Tintas',
-            css: 'users.css'
+            css: 'users.css',
+            scripts :'userLogin.js'
         })
     },
     // http://localhost:3000/users/register
