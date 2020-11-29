@@ -57,11 +57,16 @@
                     <input type="checkbox" name="bases" class="<%= (typeof old != 'undefined' && old.bases)?"is-valid":(typeof errors != 'undefined' && errors.bases)?"is-invalid": ""  %>"
                     value="<%= (typeof old != 'undefined' && old.last_name)?old.bases:'' %>" id="">
                     <label for="">Acepto terminos y condiciones</label>
-                    <small class="text-danger" id="errorBases"><%= (typeof errors != 'undefined' && errors.bases)?errors.bases.msg: "" %></small>
+                    <div>
+                        <small class="text-danger" id="errorBases"><%= (typeof errors != 'undefined' && errors.bases)?errors.bases.msg: "" %></small>
+                    </div>
                 </div>
 
-                <div class="button-algo" id="boton">
-                    <button type="submit"> Registrarse</button>
+                <div class="button-algo" id="boton" >
+                    <button type="submit" > Registrarse</button>
+                    <div>
+                        <span id="msgError" class="text-danger"></span>
+                    </div>
                 </div>
                 <article class="form2" id="registrarse">
                     <div class="algo2">

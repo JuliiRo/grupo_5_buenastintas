@@ -13,7 +13,7 @@ window.addEventListener('load', function(){
     let inputBases = formulario.querySelector('input[name="bases"]')
 
     let errores ={}
-    let regExPassword = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{6,12}$/;
+    let regExPassword = /^(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,12}$/;
     let regExEmail =  /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/;
     let regExExtensions = /(.jpg|.jpeg|.png|.gif)$/i;
 
@@ -70,23 +70,19 @@ window.addEventListener('load', function(){
         }
     })
 
-    // inputDate.addEventListener('blur', function(){
-    //     switch(true){
-    //         case this.value.length === 0 :
-    //             errorDate.innerHTML = "La fecha es obligatoria";
-    //             this.classList.add('is-invalid')
-    //         break;
-    //         case this.value.trim().length <=18:
-    //             errorDate.innerHTML = "Debes ser mayor de 18 años";
-    //             this.classList.add('is-invalid')
-    //         break;
-    //         default:
-    //             this.classList.remove('is-invalid')
-    //             this.classList.add('is-valid')
-    //             errorDate.innerHTML = ""
-    //         break;
-    //     }
-    // })
+    inputDate.addEventListener('blur', function(){
+        switch(true){
+            case this.value === 0 :
+                errorDate.innerHTML = "La fecha es obligatoria";
+                this.classList.add('is-invalid')
+            break;
+            default:
+                this.classList.remove('is-invalid')
+                this.classList.add('is-valid')
+                errorDate.innerHTML = ""
+            break;
+        }
+    })
     
     inputPhoto.addEventListener('change', function(){
         switch (true){
@@ -126,7 +122,7 @@ window.addEventListener('load', function(){
                 this.classList.add('is-invalid')
             break;
             case !regExPassword.test(this.value) :
-                errorPassword.innerHTML = "La contraseña debe tener entre 8 y 12 caracteres"
+                errorPassword.innerHTML = "La contraseña debe tener entre 8 y 12 caracteres, una mayúscula una minúscula y un número"
                 this.classList.add('is-invalid')
             break;
             default:
@@ -146,7 +142,7 @@ window.addEventListener('load', function(){
         }
         let error = false;
         for(let i=0 ; i<elementos.length-1 ; i++) {
-            if(elementos[i].value == 0){
+            if(elementos[i].value == 0 && i!=9 && i!=10){
                 elementos[i].classList.add('is-invalid');
                 error=true;
             }
