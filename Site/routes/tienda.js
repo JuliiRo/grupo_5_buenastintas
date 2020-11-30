@@ -8,6 +8,7 @@ router.get('/', tiendaController.tienda);
 router.get('/carrito', logMiddleware, tiendaController.carrito);
 router.post('/search',tiendaController.search)
 router.get('/:id', tiendaController.detalle);
+router.get('/categoria/:id', tiendaController.categoria)
 
 
 module.exports = router

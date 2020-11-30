@@ -4,19 +4,19 @@
     <section class="main-nav">
       <ul class="algo">
         <li>
-          <a href=" ">Vinos</a>
+          <a href="/tienda/categoria/1">Vinos</a>
         </li>
         <li>
-          <a href=" ">Espumantes</a>
+          <a href="/tienda/categoria/2">Espumantes</a>
         </li>
         <li>
-          <a href="">Whiskies</a>
+          <a href="/tienda/categoria/3">Whiskies</a>
         </li>
         <li>
-          <a href=" ">Aperitivos</a>
+          <a href="/tienda/categoria/4">Aperitivos</a>
         </li>
         <li>
-          <a href=" ">Cervezas</a>
+          <a href="/tienda/categoria/5">Cervezas</a>
         </li>
       </ul>
     </section>
@@ -26,20 +26,20 @@
   <section class="principal">
     <div class="container">
       <div class="row">
-        <% Productos.forEach(Productos => { %>
+        <% Productos.forEach(Producto => { %>
         <div class="col-12 col-md-6 col-lg-3">
           <div class="contenido">
             <figure>
-              <a href="/tienda/<%= Productos.id %>">
-                <img src="/images/productos/<%= Productos.image %> " alt="">
+              <a href="/tienda/<%= Producto.id %>">
+                <img src="/images/productos/<%= Producto.image %> " alt="">
               </a>
             </figure>
-            <h3><%= Productos.bodega %> </h3>
-            <span><%= Productos.nombre %> </span>
+            <h3><%= Producto.bodega %> </h3>
+            <span><%= Producto.nombre %> </span>
             <article>
-              $<%- (Productos.precio - Productos.precio * Productos.descuento / 100).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") %>
-               <% if (Productos.descuento !=0) { %>
-                  <span class="descuento"><%= Productos.descuento %>% OFF</span>
+              $<%- (Producto.precio - Producto.precio * Producto.descuento / 100).toFixed(0).toString().replace(/\B(?=(\d{3})+(?!\d))/g, ".") %>
+               <% if (Producto.descuento !=0) { %>
+                  <span class="descuento"><%= Producto.descuento %>% OFF</span>
                 <% } %>
       </div>
       
