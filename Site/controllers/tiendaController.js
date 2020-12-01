@@ -7,7 +7,17 @@ const Op = Sequelize.Op;
 module.exports = {
     //http://localhost:3000/tienda
     tienda:function(req,res){
-        db.Productos.findAll()
+        db.Productos.findAll({
+            include : [
+                {
+                    association :'categoria'
+                }
+            
+            ],
+            order :[ 
+                 ['id_categoria', 'ASC']
+            ]
+        })
         .then( Productos => {
         res.render('tienda', { 
             title: 'Tienda | Buenas tintas',
