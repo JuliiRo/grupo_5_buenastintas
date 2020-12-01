@@ -7,27 +7,27 @@
                 <h1>Regístrate</h1>
                 <div class="grupo-form" >
                     <label for="">Nombre:</label>
-                    <input type="text" id="barra" name="name" placeholder="Ingresá tu nombre completo" class=" <%= (typeof old != 'undefined' && old.name)?"is-valid":(typeof errors != 'undefined' && errors.name)?"is-invalid": ""  %>"
+                    <input type="text" id="" name="name" placeholder="Ingresá tu nombre completo" class=" <%= (typeof old != 'undefined' && old.name)?"is-valid":(typeof errors != 'undefined' && errors.name)?"is-invalid": ""  %>"
                     value="<%= (typeof old != 'undefined' && old.name)?old.name:'' %>">
                     <small class="text-danger" id="errorName"><%= (typeof errors != 'undefined' && errors.name)?errors.name.msg: "" %></small>
                 </div>
                 <div class="grupo-form" >
                     <label for="">Apellido:</label>
-                    <input type="text" id="barra" name="last_name" placeholder="Ingresá tu nombre completo"  class="<%= (typeof old != 'undefined' && old.last_name)?"is-valid":(typeof errors != 'undefined' && errors.last_name)?"is-invalid": ""  %>"
+                    <input type="text" id="" name="last_name" placeholder="Ingresá tu nombre completo"  class="<%= (typeof old != 'undefined' && old.last_name)?"is-valid":(typeof errors != 'undefined' && errors.last_name)?"is-invalid": ""  %>"
                     value="<%= (typeof old != 'undefined' && old.last_name)?old.last_name:'' %>" >
                     <small class="text-danger" id="errorLast_name"><%= (typeof errors != 'undefined' && errors.last_name)?errors.last_name.msg: "" %></small>
                 </div>
 
                 <div class="grupo-form" >
                     <label for="">Email:</label>
-                    <input type="email" id="barra" name="email" placeholder="Ingresá tu email" class="<%= (typeof old != 'undefined' && old.email)?"is-valid":(typeof errors != 'undefined' && errors.email)?"is-invalid": ""  %>"
+                    <input type="email" id="" name="email" placeholder="Ingresá tu email" class="<%= (typeof old != 'undefined' && old.email)?"is-valid":(typeof errors != 'undefined' && errors.email)?"is-invalid": ""  %>"
                     value="<%= (typeof old != 'undefined' && old.email)?old.email:'' %>" >
                     <small class="text-danger" id="errorEmail"><%= (typeof errors != 'undefined' && errors.email)?errors.email.msg: "" %></small>
                 </div>
 
                 <div class="grupo-form" >
                     <label for="">Fecha de nacimiento:</label>
-                    <input type="date" id="barra" name="date" placeholder="Fecha ne nacimiento" class="<%= (typeof old != 'undefined' && old.date)?"is-valid":(typeof errors != 'undefined' && errors.date)?"is-invalid": ""  %>"
+                    <input type="date" id="" name="date" placeholder="Fecha ne nacimiento" class="<%= (typeof old != 'undefined' && old.date)?"is-valid":(typeof errors != 'undefined' && errors.date)?"is-invalid": ""  %>"
                     value="<%= (typeof old != 'undefined' && old.date)?old.date:'' %>" >
                     <small class="text-danger" id="errorDate"><%= (typeof errors != 'undefined' && errors.date)?errors.date.msg: "" %></small>
                 </div>
@@ -40,14 +40,14 @@
 
                 <div class="grupo-form">
                     <label for="">Teléfono:</label>
-                    <input type="tel" id="barra" name="phone" placeholder="Ingresá tu teléfono" class="<%= (typeof old != 'undefined' && old.phone)?"is-valid":(typeof errors != 'undefined' && errors.phone)?"is-invalid": ""  %>"
+                    <input type="tel" id="" name="phone" placeholder="Ingresá tu teléfono" class="<%= (typeof old != 'undefined' && old.phone)?"is-valid":(typeof errors != 'undefined' && errors.phone)?"is-invalid": ""  %>"
                     value="<%= (typeof old != 'undefined' && old.phone)?old.phone:'' %>" >
                     <small class="text-danger" id="errorPhone"><%= (typeof errors != 'undefined' && errors.phone)?errors.phone.msg: "" %></small>
                 </div>
 
                 <div class="grupo-form" >
                     <label for="">Contraseña:</label>
-                    <input type="password" id="barra" name="password" placeholder="Ingresá tu contraseña" class="<%= (typeof old != 'undefined' && old.password)?"is-valid":(typeof errors != 'undefined' && errors.password)?"is-invalid": ""  %>"
+                    <input type="password" id="" name="password" placeholder="Ingresá tu contraseña" class="<%= (typeof old != 'undefined' && old.password)?"is-valid":(typeof errors != 'undefined' && errors.password)?"is-invalid": ""  %>"
                     value="<%= (typeof old != 'undefined' && old.password)?old.password:'' %>">
                     <small class="text-danger" id="errorPassword"><%= (typeof errors != 'undefined' && errors.password)?errors.password.msg: "" %></small>
                 </div>
@@ -69,6 +69,7 @@
                     </div>
                 </article>
             </form>
+            <span id="msgError"></span>
         </section>
     </section>
 </div>

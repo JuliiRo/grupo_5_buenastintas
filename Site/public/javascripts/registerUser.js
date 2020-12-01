@@ -2,7 +2,7 @@ window.addEventListener('load', function(){
     console.log('JS vinculado correctamente');
 
     let formulario = this.document.querySelector('form#register')
-
+    let formulario1 = document.querySelector('form#register')
     let inputName = formulario.querySelector('input[name="name"]')
     let inputLast_name = formulario.querySelector('input[name="last_name"]')
     let inputEmail =formulario.querySelector('input[name="email"]')
@@ -137,22 +137,36 @@ window.addEventListener('load', function(){
         }
     })
 
-    formulario.addEventListener('submit' , function(e){
+    inputBases.addEventListener('click',function(){
+        inputBases.classList.toggle('is-valid');
+        inputBases.classList.remove('is-invalid');
+        errorBases.innerHTML = ""
+})
+
+    formulario1.addEventListener('submit' , function(e){
         e.preventDefault();
-        let elementos = formulario.elements
+        let elementos = formulario1.elements
+        console.log(elementos)
+        let error = false;
+        console.log(inputBases.checked)
         if(inputBases.checked == false){
             inputBases.classList.add('is-invalid');
             errorBases.innerHTML = "Debe de aceptar las bases y condiciones"
+            error=true
         }
-        let error = false;
+
+       
+
         for(let i=0 ; i<elementos.length-1 ; i++) {
-            if(elementos[i].value == 0){
+
+            if(elementos[i].value == 0 && i != 3 && i!=7){
                 elementos[i].classList.add('is-invalid');
                 error=true;
             }
+
         }
         if(!error){
-            formulario.submit()
+            formulario1.submit()
         }else{
             msgError.innerHTML = "Los campos señadados son obligatorios"
         }
