@@ -16,43 +16,62 @@ window.addEventListener('load', function(){
     let regExEmail =  /^(([^<>()\[\]\.,;:\s@\”]+(\.[^<>()\[\]\.,;:\s@\”]:+)*)|(\”.+\”))@(([^<>()[\]\.,;:\s@\”]+\.)+[^<>()[\]\.,;:\s@\”]{2,})$/;
 
     inputEmail.addEventListener('blur', function(){
-        switch (true){
-            case this.value.length === 0:
-                errorEmail.innerHTML ="El campo email es obligatorio";
-                this.classList.add('is-invalid')
+    switch (true) {
+        case this.value.length === 0:
+            errorEmail.innerHTML = "El campo email es obligatorio";
+            this.classList.add('is-invalid')
             break;
-            case !regExEmail.test(this.value) :
-                errorEmail.innerHTML ="Debes escribir un email valido"
-                this.classList.add('is-invalid')
+        case !regExEmail.test(this.value) :
+            errorEmail.innerHTML = "El email debe ser valido"
+            this.classList.add('is-invalid')
+            break
+        default:
+            this.classList.remove('is-invalid')
+            this.classList.add('is-valid')
+            errorEmail.innerHTML = ""
             break;
-            default:
-                this.classList.remove('is-invalid')
-                this.classList.add('is-valid')
-                errorEmail.innerHTML = ""
-            break;
+    }
+ 
+})
+
+
+
+inputPassword.addEventListener('blur', function(){
+    switch(true){
+        case this.value.length === 0 :
+            errorPassword.innerHTML = "La contraseña es obligatoria";
+            this.classList.add('is-invalid')
+        break;
+        case !regExPassword.test(this.value) :
+            errorPassword.innerHTML = "La contraseña debe tener entre 8 y 12 caracteres, una mayúscula una minúscula y un número"
+            this.classList.add('is-invalid')
+        break;
+        default:
+            this.classList.remove('is-invalid')
+            this.classList.add('is-valid')
+            errorPassword.innerHTML = ""
+        break;
+    }
+})
+
+formulario.addEventListener('submit',function(e){
+    e.preventDefault();
+    let elementos = formulario.elements
+
+
+
+    let error = false
+    for (let index = 0; index < elementos.length; index++) {
+        if(elementos[index].value == 0){
+            elementos[index].classList.add('is-invalid');
+           error = true;
         }
-    })
-
-    inputPassword.addEventListener('blur', function(){
-        switch(true){
-            case this.value.length === 0 :
-                errorPassword.innerHTML = "La contraseña es obligatoria";
-                this.classList.add('is-invalid')
-            break;
-            case !regExPassword.test(this.value) :
-                errorPassword.innerHTML = "La contraseña debe tener entre 8 y 12 caracteres"
-                this.classList.add('is-invalid')
-            break;
-            default:
-                this.classList.remove('is-invalid')
-                this.classList.add('is-valid')
-                errorPassword.innerHTML = ""
-            break;
-        }
-    })
-
-   
-
-
+    }
+    if(!error){
+        formulario.submit()
+    }else{
+        msgError.innerHTML = "Los campos señadados son obligatorios"
+    }
 
 })
+ })
