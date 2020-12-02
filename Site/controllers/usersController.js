@@ -55,7 +55,8 @@ module.exports = {
                 title: 'Login | Buenas Tintas',
                 css: 'users.css',
                 errores: errores.mapped(),
-                old:req.body
+                old:req.body,
+                script : 'registerUser.js'
             })
         }
         
