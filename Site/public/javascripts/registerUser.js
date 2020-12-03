@@ -70,19 +70,19 @@ window.addEventListener('load', function(){
         }
     })
 
-    inputDate.addEventListener('blur', function(){
-        switch(true){
-            case this.value === 0 :
-                errorDate.innerHTML = "La fecha es obligatoria";
-                this.classList.add('is-invalid')
-            break;
-            default:
-                this.classList.remove('is-invalid')
-                this.classList.add('is-valid')
-                errorDate.innerHTML = ""
-            break;
-        }
-    })
+    // inputDate.addEventListener('blur', function(){
+    //     switch(true){
+    //         case this.value === 0 :
+    //             errorDate.innerHTML = "La fecha es obligatoria";
+    //             this.classList.add('is-invalid')
+    //         break;
+    //         default:
+    //             this.classList.remove('is-invalid')
+    //             this.classList.add('is-valid')
+    //             errorDate.innerHTML = ""
+    //         break;
+    //     }
+    // })
     
     inputPhoto.addEventListener('change', function(){
         switch (true){
@@ -145,6 +145,7 @@ window.addEventListener('load', function(){
         console.log(elementos)
         let error = false;
         console.log(inputBases.checked)
+
         if(inputBases.checked == false){
             inputBases.classList.add('is-invalid');
             errorBases.innerHTML = "Debe de aceptar las bases y condiciones"
@@ -154,7 +155,8 @@ window.addEventListener('load', function(){
        
 
         for(let i=0 ; i<elementos.length-1 ; i++) {
-            if(elementos[i].value == 0 && i!=9 && i!=10){
+            if(elementos[i].value == 0 && i!=3 && i!=4 && i!=7){
+
                 elementos[i].classList.add('is-invalid');
                 error=true;
             }
