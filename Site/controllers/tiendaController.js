@@ -7,7 +7,17 @@ const Op = Sequelize.Op;
 module.exports = {
     //http://localhost:3000/tienda
     tienda:function(req,res){
-        db.Productos.findAll()
+        db.Productos.findAll({
+            include : [
+                {
+                    association :'categoria'
+                }
+            
+            ],
+            order :[ 
+                 ['id_categoria', 'ASC']
+            ]
+        })
         .then( Productos => {
         res.render('tienda', { 
             title: 'Tienda | Buenas tintas',
@@ -26,26 +36,22 @@ module.exports = {
     search:function(req,res){
         db.Productos.findAll({
             where : {
-                bodega : {
-                    [Op.substring] : req.body.search
-                },
+                [Op.or] : [
+                    {
+                        bodega:req.body.search
+                    },
+                    {
+                        idCategoria:req.body.search
+                    },
+                    {
+                        nombre:req.body.search
+                    },
+                    {
+                        varietal:req.body.search
+                    },
+                ]
             },
-            
-            // where : {
-            //     nombre : {
-            //         [Op.substring] : req.body.search
-            //     }
-            // },
-            // where : {
-            //     varietal : {
-            //         [Op.substring] : req.body.search
-            //     },
-            // },
-            // where : {
-            //     idCategoria : {
-            //         [Op.substring] : req.body.search
-            //     },
-            // }
+           
         })
         .then(productos => {
             res.render('tienda',{

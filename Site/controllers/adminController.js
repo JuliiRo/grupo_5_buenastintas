@@ -13,12 +13,16 @@ const dbProducts = require('../data/dbProducts')
 module.exports = {
     listar: function(req,res){
      db.Productos.findAll({
-         include :[
-             {
-                 association : 'categoria'
-             }
-         ]
-     })
+        include : [
+            {
+                association :'categoria'
+            }
+        
+        ],
+        order :[ 
+             ['id_categoria', 'ASC']
+        ]
+    })
       .then(productos =>{
         res.render('show', {
             title: 'Administrador | Buenas Tintas',
