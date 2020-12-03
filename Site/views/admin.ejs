@@ -9,8 +9,8 @@
             <li class="opciones"><a href="/admin/show/1/show">Editar - Eliminar</a></li>
             </ul>
         </section>
-        <form action="/admin/agregar" method="POST" enctype="multipart/form-data">
-            <section class="form">
+        <form class="form" id="agregarProducto" action="/admin/agregar" method="POST" enctype="multipart/form-data">
+            <section class="form" id="agregarProducto">
                 <div class="grupo-form">
                     <h3><label for="">Bodega:</label></h3>
                     <input type="text" name="bodega" placeholder="Escribí acá" >
@@ -30,6 +30,7 @@
                 <div class="grupo-form">
                     <h3><label for="">Precio:</label></h3>
                     <input type="number"  name="precio" placeholder="Escribí acá" required >
+                    <small class="text-danger" id="errorPrecio"><%= (typeof errors != 'undefined' && errors.precio)?errors.precio.msg: "" %></small>
                 </div>
                 <div class="grupo-form">
                     <h3><label for="">Descuento</label></h3>
@@ -48,11 +49,13 @@
                 <div class="grupo-form">
                     <h3>Descripción:</h3>
                     <textarea name="descripcion" placeholder="Escribí acá" id="" cols="30" rows="5" required></textarea>
+                    <small class="text-danger" id="errorDescripcion"><%= (typeof errors != 'undefined' && errors.descripcion)?errors.descripcion.msg: "" %></small>
                   </div>
                 
                 <div class="grupo-form">
                     <h3><label for="">Agregar imagen</label></h3>
-                    <input type="file" name="image">
+                    <input type="file" name="image" accept="image/*">
+                    <small class="text-danger" id="errorImage"><%= (typeof image != 'undefined')?image: "" %></small>
                 </div>
                 <div>
                     <button type="reset" class="btn btn-outline-secondary mr-3">Borrar</button>
@@ -63,4 +66,5 @@
         
     </div>
 </div>
+
 <%- include('partials/footer') %>

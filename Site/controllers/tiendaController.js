@@ -56,6 +56,21 @@ module.exports = {
         })
 
     },
+    categoria: function(req,res){
+        db.Productos.findAll({
+            where : {
+                    id_categoria : req.params.id
+                }
+        })
+        .then(productos => {
+            res.render('tienda',{
+                title: 'Categoria | Buenas tintas',
+                css: 'tienda.css',
+                Productos:productos
+            })
+        })
+
+    },
         //http://localhost:3000/tienda/detalle
     detalle:function(req,res){
         db.Productos.findOne({

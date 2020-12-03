@@ -12,7 +12,6 @@ const dbProducts = require('../data/dbProducts')
 
 module.exports = {
     listar: function(req,res){
-        console.log("**************************")
      db.Productos.findAll({
          include :[
              {
@@ -38,7 +37,8 @@ module.exports = {
             res.render('admin', {
                 title: "Agregar",
                 css:'admin.css',
-                categorias: categorias
+                categorias: categorias,
+                script : 'agregarProductos.js' 
             }) 
         })
 },
