@@ -12,7 +12,7 @@ module.exports = {
         res.render('users', { 
             title: 'Login | Buenas Tintas',
             css: 'users.css',
-            scripts :'userLogin.js'
+            script :'userLogin.js'
         })
     },
     // http://localhost:3000/users/register
@@ -20,7 +20,7 @@ module.exports = {
         res.render('register', { 
             title: 'Registro | Buenas Tintas',
             css: 'users.css',
-            script : 'registerUser.js'
+            script :'registerUser.js'
         })
     },
     processLogin:function(req,res){
