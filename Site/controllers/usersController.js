@@ -20,7 +20,7 @@ module.exports = {
         res.render('register', { 
             title: 'Registro | Buenas Tintas',
             css: 'users.css',
-            script : 'registerUser.js'
+            script :'registerUser.js'
         })
     },
     processLogin:function(req,res){
