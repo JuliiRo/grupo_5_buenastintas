@@ -72,7 +72,7 @@ Los colores que usaremos serán:
 
 ## Entrar a Administrar
 
-Para entrar a Administrar ingresar en login y loguearse con admin@buenastintas.com pass:123456
+Para entrar a Administrar ingresar en login y loguearse con admin@buenastintas.com.ar pass:Digital123
 
 ## Entrar al carrito
 
