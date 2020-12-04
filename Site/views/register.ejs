@@ -27,7 +27,7 @@
 
                 <div class="grupo-form" >
                     <label for="">Fecha de nacimiento:</label>
-                    <input type="date" id="" name="date" placeholder="Fecha ne nacimiento" max='2002-12-03' min='1915-01-01' class="<%= (typeof old != 'undefined' && old.date)?"is-valid":(typeof errors != 'undefined' && errors.date)?"is-invalid": ""  %>"
+                    <input type="date" id="" name="date" placeholder="Fecha ne nacimiento" max='2002-12-31' min='1915-01-01' class="<%= (typeof old != 'undefined' && old.date)?"is-valid":(typeof errors != 'undefined' && errors.date)?"is-invalid": ""  %>"
                     value="<%= (typeof old != 'undefined' && old.date)?old.date:'' %>" >
                     <small class="text-danger" id="errorDate"><%= (typeof errors != 'undefined' && errors.date)?errors.date.msg: "" %></small>
                 </div>
