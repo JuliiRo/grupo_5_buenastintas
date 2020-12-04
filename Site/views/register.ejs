@@ -7,13 +7,13 @@
                 <h1>Regístrate</h1>
                 <div class="grupo-form" >
                     <label for="">Nombre:</label>
-                    <input type="text" id="" name="name" placeholder="Ingresá tu nombre completo" class=" <%= (typeof old != 'undefined' && old.name)?"is-valid":(typeof errors != 'undefined' && errors.name)?"is-invalid": ""  %>"
+                    <input type="text" id="" name="name" placeholder="Ingresá tu nombre" class=" <%= (typeof old != 'undefined' && old.name)?"is-valid":(typeof errors != 'undefined' && errors.name)?"is-invalid": ""  %>"
                     value="<%= (typeof old != 'undefined' && old.name)?old.name:'' %>">
                     <small class="text-danger" id="errorName"><%= (typeof errors != 'undefined' && errors.name)?errors.name.msg: "" %></small>
                 </div>
                 <div class="grupo-form" >
                     <label for="">Apellido:</label>
-                    <input type="text" id="" name="last_name" placeholder="Ingresá tu nombre completo"  class="<%= (typeof old != 'undefined' && old.last_name)?"is-valid":(typeof errors != 'undefined' && errors.last_name)?"is-invalid": ""  %>"
+                    <input type="text" id="" name="last_name" placeholder="Ingresá tu apellido"  class="<%= (typeof old != 'undefined' && old.last_name)?"is-valid":(typeof errors != 'undefined' && errors.last_name)?"is-invalid": ""  %>"
                     value="<%= (typeof old != 'undefined' && old.last_name)?old.last_name:'' %>" >
                     <small class="text-danger" id="errorLast_name"><%= (typeof errors != 'undefined' && errors.last_name)?errors.last_name.msg: "" %></small>
                 </div>
