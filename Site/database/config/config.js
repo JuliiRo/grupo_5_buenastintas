@@ -15,10 +15,10 @@ module.exports = {
     "dialect": "mysql"
   },
   "production": {
-    "username": "root",
-    "password": null,
-    "database": "database_production",
-    "host": "127.0.0.1",
+    "username": "Buentas",
+    "password": "Tintasdb123",
+    "database": "buenastintasdb",
+    "host": "localhost",
     "dialect": "mysql"
   }
 }
